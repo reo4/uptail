@@ -27,28 +27,24 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo " <section id=\"";
+        echo " <section id=\"#";
         echo $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "menu", []);
         echo "\" class=\"bg-light-gray\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">
-            ";
-        // line 5
-        echo ($context["content"] ?? null);
-        echo "
         </div>
     </div>
     <div class=\"row\">
         ";
-        // line 9
+        // line 8
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "portfolios", []));
         foreach ($context['_seq'] as $context["_key"] => $context["portfolio"]) {
-            // line 10
+            // line 9
             echo "            <div class=\"col-md-4 col-sm-6 portfolio-item\">
                 <a href=\"#portfolioModal";
-            // line 11
+            // line 10
             echo $this->getAttribute($context["portfolio"], "modalid", []);
             echo "\" class=\"portfolio-link\" data-toggle=\"modal\">
                     <div class=\"portfolio-hover\">
@@ -57,17 +53,17 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
                         </div>
                     </div>
                     <img src=\"";
-            // line 17
+            // line 16
             echo $this->getAttribute($this->getAttribute($this->getAttribute(($context["page"] ?? null), "media", []), $this->getAttribute($context["portfolio"], "thumbnail", []), [], "array"), "url", []);
             echo "\" class=\"img-responsive\" alt=\"\">
                 </a>
                 <div class=\"portfolio-caption\">
                     <h4>";
-            // line 20
+            // line 19
             echo $this->getAttribute($context["portfolio"], "title", []);
             echo "</h4>
                     <p class=\"text-muted\">";
-            // line 21
+            // line 20
             echo $this->getAttribute($context["portfolio"], "subtitle", []);
             echo "</p>
                 </div>
@@ -78,18 +74,18 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['portfolio'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 25
         echo "    </div>
 </div>
 </section>
 
 
  ";
-        // line 31
+        // line 30
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "portfolios", []));
         foreach ($context['_seq'] as $context["_key"] => $context["portfolio"]) {
-            // line 32
+            // line 31
             echo "    <div class=\"portfolio-modal modal fade\" id=\"portfolioModal";
             echo $this->getAttribute($context["portfolio"], "modalid", []);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">
@@ -105,38 +101,38 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
                     <div class=\"col-lg-8 col-lg-offset-2\">
                         <div class=\"modal-body\">
                             <h2>";
-            // line 44
+            // line 43
             echo $this->getAttribute($context["portfolio"], "title", []);
             echo "</h2>
                             <hr class=\"star-primary\">
                             <img src=\"";
-            // line 46
+            // line 45
             echo $this->getAttribute($this->getAttribute($this->getAttribute(($context["page"] ?? null), "media", []), $this->getAttribute($context["portfolio"], "img", []), [], "array"), "url", []);
             echo "\" class=\"img-responsive img-centered\" alt=\"";
             echo $this->getAttribute($context["portfolio"], "alt", []);
             echo "\">
                             <p>";
-            // line 47
+            // line 46
             echo $this->getAttribute($context["portfolio"], "description", []);
             echo "</p>
                             <ul class=\"list-inline item-details\">
                                 <li>Client:
                                     <strong><a href=\"http://startbootstrap.com\">";
-            // line 50
+            // line 49
             echo $this->getAttribute($context["portfolio"], "client", []);
             echo "</a>
                                     </strong>
                                 </li>
                                 <li>Date:
                                     <strong><a href=\"http://startbootstrap.com\">";
-            // line 54
+            // line 53
             echo $this->getAttribute($context["portfolio"], "projectdate", []);
             echo "</a>
                                     </strong>
                                 </li>
                                 <li>Service:
                                     <strong><a href=\"http://startbootstrap.com\">";
-            // line 58
+            // line 57
             echo $this->getAttribute($context["portfolio"], "category", []);
             echo "</a>
                                     </strong>
@@ -168,7 +164,7 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
 
     public function getDebugInfo()
     {
-        return array (  140 => 58,  133 => 54,  126 => 50,  120 => 47,  114 => 46,  109 => 44,  93 => 32,  89 => 31,  82 => 26,  71 => 21,  67 => 20,  61 => 17,  52 => 11,  49 => 10,  45 => 9,  38 => 5,  30 => 1,);
+        return array (  136 => 57,  129 => 53,  122 => 49,  116 => 46,  110 => 45,  105 => 43,  89 => 31,  85 => 30,  78 => 25,  67 => 20,  63 => 19,  57 => 16,  48 => 10,  45 => 9,  41 => 8,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -181,11 +177,10 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
 
     public function getSourceContext()
     {
-        return new Source(" <section id=\"{{page.header.menu}}\" class=\"bg-light-gray\">
+        return new Source(" <section id=\"#{{page.header.menu}}\" class=\"bg-light-gray\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">
-            {{ content }}
         </div>
     </div>
     <div class=\"row\">
