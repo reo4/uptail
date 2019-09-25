@@ -27,7 +27,9 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo " <section id=\"productss\" class=\"bg-light-gray\">
+        echo " <section id=\"";
+        echo $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "menu", []);
+        echo "\" class=\"bg-light-gray\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">
@@ -166,7 +168,7 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
 
     public function getDebugInfo()
     {
-        return array (  138 => 58,  131 => 54,  124 => 50,  118 => 47,  112 => 46,  107 => 44,  91 => 32,  87 => 31,  80 => 26,  69 => 21,  65 => 20,  59 => 17,  50 => 11,  47 => 10,  43 => 9,  36 => 5,  30 => 1,);
+        return array (  140 => 58,  133 => 54,  126 => 50,  120 => 47,  114 => 46,  109 => 44,  93 => 32,  89 => 31,  82 => 26,  71 => 21,  67 => 20,  61 => 17,  52 => 11,  49 => 10,  45 => 9,  38 => 5,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -179,7 +181,7 @@ class __TwigTemplate_071e8712cf2d11ce10953b947fecc292c115159eac66b46fd1dabc66f48
 
     public function getSourceContext()
     {
-        return new Source(" <section id=\"productss\" class=\"bg-light-gray\">
+        return new Source(" <section id=\"{{page.header.menu}}\" class=\"bg-light-gray\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">

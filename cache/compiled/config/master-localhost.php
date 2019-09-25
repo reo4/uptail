@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1569356308,
-    'checksum' => '64a2711857e35b77019413bb135528cb',
+    'timestamp' => 1569404740,
+    'checksum' => '4feebff887bbd55bacdc600221a1afc7',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -23,7 +23,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1569355118
+                'modified' => 1569404737
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -617,7 +617,7 @@ node_modules'
             'salt' => 'bME8flALKNxH0G'
         ],
         'site' => [
-            'title' => 'Grav',
+            'title' => 'Uptail',
             'default_lang' => 'en',
             'author' => [
                 'name' => 'Joe Bloggs',
@@ -650,7 +650,7 @@ node_modules'
                 ],
                 1 => [
                     'title' => 'Portfolio',
-                    'url' => '#portfolio'
+                    'url' => '#products'
                 ],
                 2 => [
                     'title' => 'About',

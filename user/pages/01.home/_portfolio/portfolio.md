@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-menu: portfolio
+menu: products
 portfolios:
     - title: Dreams
       subtitle: Website Design
