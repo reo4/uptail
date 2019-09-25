@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1569404740,
-    'checksum' => '4feebff887bbd55bacdc600221a1afc7',
+    'timestamp' => 1569416302,
+    'checksum' => '37aa7bdaf3192d9e0c4a5159635e9a9c',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -23,7 +23,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1569404737
+                'modified' => 1569416247
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -649,20 +649,16 @@ node_modules'
                     'url' => '#services'
                 ],
                 1 => [
-                    'title' => 'Portfolio',
+                    'title' => 'Products',
                     'url' => '#products'
                 ],
                 2 => [
-                    'title' => 'About',
-                    'url' => '#about'
+                    'title' => 'Training',
+                    'url' => '#training'
                 ],
                 3 => [
-                    'title' => 'Team',
-                    'url' => '#team'
-                ],
-                4 => [
-                    'title' => 'Contact',
-                    'url' => '#contact'
+                    'title' => 'Company',
+                    'url' => '#company'
                 ]
             ],
             'social' => [

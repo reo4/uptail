@@ -15,14 +15,12 @@ description: "Write an awesome description for your new site here. You can edit 
 links:
   - title: Services
     url: '#services'
-  - title: Portfolio
-    url: '#portfolio'
-  - title: About
-    url: '#about'
-  - title: Team
-    url: '#team'  
-  - title: Contact
-    url: '#contact'           
+  - title: Products
+    url: '#products'
+  - title: Training
+    url: '#training'
+  - title: Company
+    url: '#company'         
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:

@@ -1,6 +1,6 @@
 ---
 title: Services
-menu: Services
+menu: services
 class: small
 services:
     - header: E-Commerce

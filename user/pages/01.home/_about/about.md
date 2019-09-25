@@ -1,6 +1,6 @@
 ---
 title: About
-menu: About
+menu: training
 abouts:
     - img: 1.jpg
       heading: 2009-2011

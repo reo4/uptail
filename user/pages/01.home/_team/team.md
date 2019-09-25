@@ -1,6 +1,6 @@
 ---
 title: Team
-menu: Team
+menu: company
 people:
     - name: Kay Garland
       pic: 1.jpg
