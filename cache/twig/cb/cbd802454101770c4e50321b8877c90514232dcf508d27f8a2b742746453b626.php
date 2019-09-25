@@ -138,7 +138,7 @@ class __TwigTemplate_1a774b96cfeb9e04dd46a557b2dbebc900bcb50223eaad955c912029eaa
     {
         // line 24
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => ["priority" => 101, "group" => "bottom"]], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => ["priority" => 101]], "method");
         // line 25
         echo "    ";
         $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/bootstrap.min.js", 1 => ["priority" => 100, "group" => "bottom"]], "method");
@@ -271,7 +271,7 @@ class __TwigTemplate_1a774b96cfeb9e04dd46a557b2dbebc900bcb50223eaad955c912029eaa
   {% endblock %}
 
   {% block javasripts %}
-    {% do assets.addJs('jquery',{'priority':101,'group':'bottom'}) %}
+    {% do assets.addJs('jquery',{'priority':101}) %}
     {% do assets.addJs('theme://js/bootstrap.min.js',{'priority':100,'group':'bottom'}) %}
     {% do assets.addJs('theme://js/jquery.easing.min.js',{'group':'bottom'}) %}
     {% do assets.addJs('theme://js/classie.js',{'group':'bottom'}) %}

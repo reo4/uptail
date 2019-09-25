@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1569356308,
-    'checksum' => '7ed3e38b0fb6386ff546deac5bd40228',
+    'timestamp' => 1569430209,
+    'checksum' => '2b917832e6a0a3a7910a528ddd96597a',
     'files' => [
         'system/blueprints/config' => [
             'backups' => [
@@ -58,6 +58,10 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
                 'modified' => 1568933234
+            ],
+            'plugins/smoochchat' => [
+                'file' => 'user/plugins/smoochchat/blueprints.yaml',
+                'modified' => 1569430199
             ]
         ]
     ],
@@ -4204,6 +4208,34 @@ return [
                 ],
                 'name' => 'plugins.problems.built_in_css',
                 'validation' => 'strict'
+            ],
+            'plugins.smoochchat' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.smoochchat.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.smoochchat.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.smoochchat.app_id' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_SMOOCHCHAT.APP_ID',
+                'name' => 'plugins.smoochchat.app_id',
+                'validation' => 'strict'
             ]
         ],
         'rules' => [
@@ -4686,6 +4718,10 @@ return [
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
                     'built_in_css' => 'plugins.problems.built_in_css'
+                ],
+                'smoochchat' => [
+                    'enabled' => 'plugins.smoochchat.enabled',
+                    'app_id' => 'plugins.smoochchat.app_id'
                 ]
             ]
         ],

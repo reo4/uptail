@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1569416302,
-    'checksum' => '37aa7bdaf3192d9e0c4a5159635e9a9c',
+    'timestamp' => 1569430632,
+    'checksum' => 'd923d5223156fc4114184c97d9702bda',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -31,7 +31,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1569355881
+                'modified' => 1569430199
             ]
         ],
         'system/config' => [
@@ -84,6 +84,10 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1568933234
+            ],
+            'plugins/smoochchat' => [
+                'file' => 'user/plugins/smoochchat/smoochchat.yaml',
+                'modified' => 1569430616
             ]
         ]
     ],
@@ -273,6 +277,10 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'smoochchat' => [
+                'enabled' => true,
+                'app_id' => '5d8b9c325e3f9500108749e5'
             ]
         ],
         'backups' => [

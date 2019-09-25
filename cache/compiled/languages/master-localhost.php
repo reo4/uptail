@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1569356309,
-    'checksum' => '3de2d3333ef7b916e450380b933262fb',
+    'timestamp' => 1569430211,
+    'checksum' => '940f57d87dfc76cf4cb6174696b66dc2',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -178,6 +178,10 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/languages.yaml',
                 'modified' => 1568933234
+            ],
+            'plugins/smoochchat' => [
+                'file' => 'user/plugins/smoochchat/languages.yaml',
+                'modified' => 1569430199
             ]
         ],
         'user/plugins/admin/languages' => [
@@ -2612,6 +2616,10 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
             'PLUGIN_PROBLEMS' => [
                 'BUILTIN_CSS' => 'Use built in CSS',
                 'BUILTIN_CSS_HELP' => 'Include the CSS provided by the Problems plugin'
+            ],
+            'PLUGIN_SMOOCHCHAT' => [
+                'APP_ID' => 'App ID',
+                'APP_ID_HELP' => 'ID of Smooch app to connect messenger to'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---

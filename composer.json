@@ -104,6 +104,7 @@
             "php bin/gpm install error -y",
             "php bin/gpm install form -y",
             "php bin/gpm install login -y",
+            "php bin/gpm install smoochchat -y",
             "php bin/gpm install problems -y"
         ]
     },
