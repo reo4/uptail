@@ -99,7 +99,7 @@
         "test-windows": "vendor\\bin\\codecept run unit",
         "compile": [
             "php bin/grav install",
-            "php bin/gpm install agency -y",
+            // "php bin/gpm install agency -y",
             "php bin/gpm install admin -y"
         ]
     },
