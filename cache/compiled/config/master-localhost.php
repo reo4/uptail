@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1569430632,
-    'checksum' => 'd923d5223156fc4114184c97d9702bda',
+    'timestamp' => 1569783821,
+    'checksum' => 'd0e35379a9501419ea602a7fe7304112',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -12,6 +12,10 @@ return [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1569346891
+            ],
+            'plugins/cookieconsent' => [
+                'file' => 'user/config/plugins/cookieconsent.yaml',
+                'modified' => 1569783819
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
@@ -31,7 +35,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1569430199
+                'modified' => 1569783361
             ]
         ],
         'system/config' => [
@@ -64,6 +68,14 @@ return [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
                 'modified' => 1569346873
+            ],
+            'plugins/antispam' => [
+                'file' => 'user/plugins/antispam/antispam.yaml',
+                'modified' => 1569783037
+            ],
+            'plugins/cookieconsent' => [
+                'file' => 'user/plugins/cookieconsent/cookieconsent.yaml',
+                'modified' => 1569783361
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
@@ -156,6 +168,20 @@ return [
                         'visitors' => 20
                     ]
                 ]
+            ],
+            'antispam' => [
+                'enabled' => true
+            ],
+            'cookieconsent' => [
+                'enabled' => true,
+                'cdn' => true,
+                'popup_background_color' => '#000000',
+                'popup_text_color' => '#ffffff',
+                'button_background_color' => '#f1d600',
+                'button_text_color' => '#000000',
+                'button_border_color' => '#f1d600',
+                'position' => 'bottom-left',
+                'theme' => 'block'
             ],
             'email' => [
                 'enabled' => true,

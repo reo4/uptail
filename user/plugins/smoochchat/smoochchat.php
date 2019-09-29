@@ -46,5 +46,6 @@ class SmoochChatPlugin extends Plugin
         );
 
         $this->grav['assets']->addJs("plugin://smoochchat/js/smooch.js");
+        $this->grav['assets']->addCss("plugin://smoochchat/css/smooch.css");
     }
 }

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1569430211,
-    'checksum' => '940f57d87dfc76cf4cb6174696b66dc2',
+    'timestamp' => 1569783371,
+    'checksum' => 'a503eaf86dc9dd2472f1c42ca6fccc82',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -163,6 +163,14 @@ return [
             ]
         ],
         'user/plugins' => [
+            'plugins/antispam' => [
+                'file' => 'user/plugins/antispam/languages.yaml',
+                'modified' => 1569783037
+            ],
+            'plugins/cookieconsent' => [
+                'file' => 'user/plugins/cookieconsent/languages.yaml',
+                'modified' => 1569783361
+            ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/languages.yaml',
                 'modified' => 1568933231
@@ -1294,6 +1302,17 @@ Sie haben **2FA** für dieses Konto aktiviert. Bitte benutzen Sie Ihre **2FA** A
                 'BACKUPS_PROFILE_SCHEDULE_AT' => 'Geplanten Job ausführen',
                 'COMMAND' => 'Befehl',
                 'EXTRA_ARGUMENTS' => 'Zusätzliche Argumente'
+            ],
+            'PLUGIN_ANTISPAM' => [
+                'NOSCRIPT' => '[Mailadresse ist Javascript-verschlüsselt]'
+            ],
+            'PLUGINS' => [
+                'COOKIECONSENT' => [
+                    'CONTENT_MESSAGE' => 'Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.',
+                    'CONTENT_DISMISS' => 'OK',
+                    'CONTENT_LINK' => 'Weitere Informationen',
+                    'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ]
             ],
             'PLUGIN_EMAIL' => [
                 'EMAIL_NOT_CONFIGURED' => 'E-Mail ist nicht konfiguriert',
@@ -2487,6 +2506,17 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'SHOW_SENSITIVE' => 'Show Sensitive Data',
                 'SHOW_SENSITIVE_HELP' => 'Clockwork Provider ONLY: Censor potentially sensitive information (POST parameters, cookies, files, configuration and most array/object data in log messages)'
             ],
+            'PLUGIN_ANTISPAM' => [
+                'NOSCRIPT' => '[email address is javascript encrypted]'
+            ],
+            'PLUGINS' => [
+                'COOKIECONSENT' => [
+                    'CONTENT_MESSAGE' => 'This website uses cookies to ensure you get the best experience on our website.',
+                    'CONTENT_DISMISS' => 'Got it!',
+                    'CONTENT_LINK' => 'Learn more',
+                    'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ]
+            ],
             'PLUGIN_EMAIL' => [
                 'MAIL_ENGINE' => 'Mail Engine',
                 'MAIL_ENGINE_DISABLED' => 'Disabled',
@@ -3667,6 +3697,14 @@ Tienes **2FA** habilitado en esta cuenta. Por favor usa tu aplicación **2FA** p
                 'XSS_WHITELIST_PERMISSIONS' => 'Permisos de lista blanca',
                 'XSS_WHITELIST_PERMISSIONS_HELP' => 'Los usuarios con estos permisos omitirán las reglas XSS al guardar contenido'
             ],
+            'PLUGINS' => [
+                'COOKIECONSENT' => [
+                    'CONTENT_MESSAGE' => 'Usamos cookies para ofrecer nuestros servicios de la mejor forma posible. Al usar nuestros servicios, usted acepta nuestro uso de cookies.',
+                    'CONTENT_DISMISS' => 'OK',
+                    'CONTENT_LINK' => 'ver más',
+                    'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ]
+            ],
             'PLUGIN_EMAIL' => [
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Por favor configura una dirección de \'remitente\' en la configuración del Plugin de Email o en el formulario',
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Por favor configura una dirección de \'destinatario\' en la configuración del Plugin de Email o en el formulario'
@@ -4752,6 +4790,14 @@ L\'**authentification à deux facteurs** est activée sur ce compte. Veuillez ut
                 'BACKUPS_PROFILE_SCHEDULE_AT' => 'Exécuter la planification',
                 'COMMAND' => 'Commande',
                 'EXTRA_ARGUMENTS' => 'Arguments supplémentaires'
+            ],
+            'PLUGINS' => [
+                'COOKIECONSENT' => [
+                    'CONTENT_MESSAGE' => 'Nous utilisons des cookies pour assurer une meilleure navigation sur notre site. En utilisant nos services, vous acceptez notre utilisation des cookies.',
+                    'CONTENT_DISMISS' => 'OK',
+                    'CONTENT_LINK' => 'En savoir plus',
+                    'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ]
             ],
             'PLUGIN_EMAIL' => [
                 'EMAIL_NOT_CONFIGURED' => 'L’e-mail n’est pas configuré',
@@ -19955,6 +20001,14 @@ La **2FA** è abilitata per questo account. Si prega di utilizzare la vostra app
                 'ROUTE_DEFAULT' => 'Route di default',
                 'ROUTE_CANONICAL' => 'Route canonica',
                 'ROUTE_ALIASES' => 'Alias della route'
+            ],
+            'PLUGINS' => [
+                'COOKIECONSENT' => [
+                    'CONTENT_MESSAGE' => 'Utilizziamo i cookie per migliorare i nostri servizi. Avvalendoti dei nostri servizi accetti la politica sull\'uso dei cookie.',
+                    'CONTENT_DISMISS' => 'OK',
+                    'CONTENT_LINK' => 'scopri di più',
+                    'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ]
             ],
             'PLUGIN_EMAIL' => [
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Per favore, configura l\'indirizzo di destinazione (\'to\') nella configurazione del Plugin Email, oppure direttamente nella form.',

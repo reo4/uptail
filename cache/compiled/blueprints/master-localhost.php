@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1569430209,
-    'checksum' => '2b917832e6a0a3a7910a528ddd96597a',
+    'timestamp' => 1569783369,
+    'checksum' => '4a27686d4d10189803992f904efe5d50',
     'files' => [
         'system/blueprints/config' => [
             'backups' => [
@@ -38,6 +38,14 @@ return [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
                 'modified' => 1569346873
+            ],
+            'plugins/antispam' => [
+                'file' => 'user/plugins/antispam/blueprints.yaml',
+                'modified' => 1569783037
+            ],
+            'plugins/cookieconsent' => [
+                'file' => 'user/plugins/cookieconsent/blueprints.yaml',
+                'modified' => 1569783361
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
@@ -3126,6 +3134,203 @@ return [
                 'name' => 'plugins.admin.popularity.history.visitors',
                 'validation' => 'loose'
             ],
+            'plugins.antispam' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.antispam.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.antispam.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.cookieconsent.basics' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.cookieconsent.basics',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cookieconsent.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.cdn' => [
+                'type' => 'toggle',
+                'label' => 'CDN',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cookieconsent.cdn',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.content' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.cookieconsent.content',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.content_message' => [
+                'type' => 'text',
+                'label' => 'Message',
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.content_message',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.content_dismiss' => [
+                'type' => 'text',
+                'label' => 'Dismiss button text',
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.content_dismiss',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.content_link' => [
+                'type' => 'text',
+                'label' => 'Policy link text',
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.content_link',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.content_href' => [
+                'type' => 'text',
+                'label' => 'Link to policy',
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.content_href',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.colors' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.cookieconsent.colors',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.popup_background_color' => [
+                'type' => 'colorpicker',
+                'label' => 'Banner background',
+                'default' => NULL,
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.popup_background_color',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.popup_text_color' => [
+                'type' => 'colorpicker',
+                'label' => 'Banner Text',
+                'default' => NULL,
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.popup_text_color',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.button_background_color' => [
+                'type' => 'colorpicker',
+                'label' => 'Button background',
+                'default' => NULL,
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.button_background_color',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.button_text_color' => [
+                'type' => 'colorpicker',
+                'label' => 'Button text',
+                'default' => NULL,
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.button_text_color',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.button_border_color' => [
+                'type' => 'colorpicker',
+                'label' => 'Button border',
+                'default' => NULL,
+                'validate' => [
+                    'type' => 'text'
+                ],
+                'name' => 'plugins.cookieconsent.button_border_color',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.style' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.cookieconsent.style',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.position' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'label' => 'Position',
+                'default' => 'bottom',
+                'options' => [
+                    'top' => 'Top',
+                    'top-pushdown' => 'Top (Pushdown)',
+                    'bottom' => 'Bottom',
+                    'bottom-left' => 'Bottom Left',
+                    'bottom-right' => 'Bottom Right'
+                ],
+                'name' => 'plugins.cookieconsent.position',
+                'validation' => 'strict'
+            ],
+            'plugins.cookieconsent.theme' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'label' => 'Layout',
+                'default' => 'block',
+                'options' => [
+                    'block' => 'Block (angled corners)',
+                    'classic' => 'Classic (round corners)',
+                    'edgeless' => 'Edgeless'
+                ],
+                'name' => 'plugins.cookieconsent.theme',
+                'validation' => 'strict'
+            ],
             'plugins.email' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -4590,6 +4795,28 @@ return [
                     'dashboard' => [
                         'days_of_stats' => 'plugins.admin.dashboard.days_of_stats'
                     ]
+                ],
+                'antispam' => [
+                    'enabled' => 'plugins.antispam.enabled'
+                ],
+                'cookieconsent' => [
+                    'basics' => 'plugins.cookieconsent.basics',
+                    'enabled' => 'plugins.cookieconsent.enabled',
+                    'cdn' => 'plugins.cookieconsent.cdn',
+                    'content' => 'plugins.cookieconsent.content',
+                    'content_message' => 'plugins.cookieconsent.content_message',
+                    'content_dismiss' => 'plugins.cookieconsent.content_dismiss',
+                    'content_link' => 'plugins.cookieconsent.content_link',
+                    'content_href' => 'plugins.cookieconsent.content_href',
+                    'colors' => 'plugins.cookieconsent.colors',
+                    'popup_background_color' => 'plugins.cookieconsent.popup_background_color',
+                    'popup_text_color' => 'plugins.cookieconsent.popup_text_color',
+                    'button_background_color' => 'plugins.cookieconsent.button_background_color',
+                    'button_text_color' => 'plugins.cookieconsent.button_text_color',
+                    'button_border_color' => 'plugins.cookieconsent.button_border_color',
+                    'style' => 'plugins.cookieconsent.style',
+                    'position' => 'plugins.cookieconsent.position',
+                    'theme' => 'plugins.cookieconsent.theme'
                 ],
                 'email' => [
                     'enabled' => 'plugins.email.enabled',

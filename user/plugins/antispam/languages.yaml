@@ -1,0 +1,7 @@
+en:
+  PLUGIN_ANTISPAM:
+    NOSCRIPT: '[email address is javascript encrypted]'
+
+de:
+  PLUGIN_ANTISPAM:
+    NOSCRIPT: '[Mailadresse ist Javascript-verschlüsselt]'
