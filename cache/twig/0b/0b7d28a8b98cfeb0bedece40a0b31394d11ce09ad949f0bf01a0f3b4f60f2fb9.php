@@ -46,7 +46,7 @@ class __TwigTemplate_d5c031afb978cac4c5229df9f469dcb658b8ad869b7264582e99966709c
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "services", []));
         foreach ($context['_seq'] as $context["_key"] => $context["service"]) {
             // line 10
-            echo "            <div class=\"col-md-4\">
+            echo "            <div class=\"col-md-4 mb-5\">
                 ";
             // line 11
             if ($this->getAttribute($context["service"], "icon", [])) {
@@ -126,7 +126,7 @@ class __TwigTemplate_d5c031afb978cac4c5229df9f469dcb658b8ad869b7264582e99966709c
     </div>
     <div class=\"row text-center\">
         {% for service in page.header.services %}
-            <div class=\"col-md-4\">
+            <div class=\"col-md-4 mb-5\">
                 {% if service.icon %}
                     <span class=\"fa-stack fa-4x\">
                         <i class=\"fa fa-circle fa-stack-2x text-primary\"></i>

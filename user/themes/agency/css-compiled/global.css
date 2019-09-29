@@ -7619,4 +7619,16 @@ body {
   webkit-tap-highlight-color: #314DF1;
 }
 
+.navbar-default .nav li a:focus {
+  color: white;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
 /*# sourceMappingURL=global.css.map */

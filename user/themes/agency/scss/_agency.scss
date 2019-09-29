@@ -892,3 +892,15 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: $primary;
 }
+
+// Customization
+.navbar-default .nav li a:focus {
+    color: white;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+.mb-5 {
+    margin-bottom: 5rem;
+}

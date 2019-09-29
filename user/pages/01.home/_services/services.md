@@ -3,16 +3,25 @@ title: Services
 menu: services
 class: small
 services:
-    - header: E-Commerce
+    - header: Omni-channel
       icon: shopping-cart
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-    - header: Responsive Design
-      icon: laptop
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-    - header: Web Security
-      icon: lock
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+      text: POS, online store, integration with external services and devices.
+    - header: Payment Integration
+      icon: credit-card
+      text: Integrated payment services for your retail system.
+    - header: Upgrade
+      icon: cube
+      text: Migrations from other systems, code and data upgrades.
+    - header: Support
+      icon: life-ring
+      text: POS, online store, integration with external services and devices.
+    - header: Payment Integration
+      icon: book
+      text: Retail development training and support for developers.
+    - header: Search For Something Special ?
+      icon: shopping-cart
+      text: Contact us.
 ---
 
 ## Services
-### Lorem ipsum dolor sit amet consectetur
+### Features We Provide
