@@ -45,4 +45,4 @@ form:
 ---
 
 ## CONTACT US
-### Lorem ipsum dolor sit amet consectetur.
+### How can we help you?

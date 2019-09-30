@@ -28,12 +28,12 @@ social:
     url: http://twitter.com/jekyllrb
   - title: facebook
     url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
+  - title: linkedin
+    url: linkedin
+  # - title: bitbucket 
+  #   url: http://bitbucket.org/jekyll
+  # - title: github
+  #   url: http://github.com/jekyll
 
 # Postal address (add as many lines as necessary)
 address:
@@ -41,7 +41,11 @@ address:
   - line: Beverly Hills, CA 90210
 
 quicklinks:
-  - title: Privacy Policy
+  - title: Products
+    url: '#products'
+  - title: Services
+    url: '#services'
+  - title: Company
     url: '#'
-  - title: Terms of Use
+  - title: Privacy & Terms 
     url: '#'

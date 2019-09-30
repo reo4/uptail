@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/Xampp/htdocs/uptail/user/config/site.yaml',
-    'modified' => 1569416247,
+    'modified' => 1569787311,
     'data' => [
         'title' => 'Uptail',
         'author' => [
@@ -42,16 +42,8 @@ return [
                 'url' => NULL
             ],
             2 => [
-                'title' => 'stack-overflow',
-                'url' => 'http://stackoverflow.com/questions/tagged/jekyll'
-            ],
-            3 => [
-                'title' => 'bitbucket',
-                'url' => 'http://bitbucket.org/jekyll'
-            ],
-            4 => [
-                'title' => 'github',
-                'url' => 'http://github.com/jekyll'
+                'title' => 'linkedin',
+                'url' => 'linkedin'
             ]
         ],
         'address' => [
@@ -64,11 +56,19 @@ return [
         ],
         'quicklinks' => [
             0 => [
-                'title' => 'Privacy Policy',
-                'url' => '#'
+                'title' => 'Products',
+                'url' => '#products'
             ],
             1 => [
-                'title' => 'Terms of Use',
+                'title' => 'Services',
+                'url' => '#services'
+            ],
+            2 => [
+                'title' => 'Company',
+                'url' => '#'
+            ],
+            3 => [
+                'title' => 'Privacy & Terms',
                 'url' => '#'
             ]
         ]
