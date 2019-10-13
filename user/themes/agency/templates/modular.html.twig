@@ -7,6 +7,9 @@
 {% block content %}
     {{ page.content }}
     {% for module in page.collection() %}
+    	{% set hide = module.header.hide|defined(false) %}
+    	{% if not hide %}
         {{ module.content }}
+    	{% endif %}
     {% endfor %}
 {% endblock %}

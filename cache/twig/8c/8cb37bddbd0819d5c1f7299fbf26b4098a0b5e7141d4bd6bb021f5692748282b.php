@@ -51,10 +51,19 @@ class __TwigTemplate_ca70182234b5b7a678ffe48612fb197ec13b43c2713cb15bb189d8a6d6f
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["page"] ?? null), "collection", [], "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["module"]) {
             // line 10
-            echo "        ";
-            echo $this->getAttribute($context["module"], "content", []);
-            echo "
-    ";
+            echo "    \t";
+            $context["hide"] = $this->env->getExtension('Grav\Common\Twig\TwigExtension')->definedDefaultFilter($this->getAttribute($this->getAttribute($context["module"], "header", []), "hide", []), false);
+            // line 11
+            echo "    \t";
+            if ( !($context["hide"] ?? null)) {
+                // line 12
+                echo "        ";
+                echo $this->getAttribute($context["module"], "content", []);
+                echo "
+    \t";
+            }
+            // line 14
+            echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['module'], $context['_parent'], $context['loop']);
@@ -99,7 +108,7 @@ class __TwigTemplate_ca70182234b5b7a678ffe48612fb197ec13b43c2713cb15bb189d8a6d6f
 
     public function getDebugInfo()
     {
-        return array (  65 => 4,  54 => 10,  50 => 9,  45 => 8,  42 => 7,  37 => 1,  35 => 3,  29 => 1,);
+        return array (  74 => 4,  66 => 14,  60 => 12,  57 => 11,  54 => 10,  50 => 9,  45 => 8,  42 => 7,  37 => 1,  35 => 3,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -121,7 +130,10 @@ class __TwigTemplate_ca70182234b5b7a678ffe48612fb197ec13b43c2713cb15bb189d8a6d6f
 {% block content %}
     {{ page.content }}
     {% for module in page.collection() %}
+    \t{% set hide = module.header.hide|defined(false) %}
+    \t{% if not hide %}
         {{ module.content }}
+    \t{% endif %}
     {% endfor %}
 {% endblock %}
 ", "modular.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\agency\\templates\\modular.html.twig");

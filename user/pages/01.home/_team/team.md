@@ -1,5 +1,6 @@
 ---
 title: Team
+hide: true
 menu: company
 people:
     - name: Kay Garland

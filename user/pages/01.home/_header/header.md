@@ -2,11 +2,11 @@
 title: Header
 menu: Top
 buttons:
-    - text: Tell me more
+    - text: 'Get #SelfPOS >'
       url: '#about'
       primary: true
 featured: header.jpg
 ---
 
-# Welcome To Our Studio!
-## It's Nice To Meet You
+## Missing Self Checkout for your D365 Retail ?
+# Take customer experience to the next level with #SelfPOS extension 

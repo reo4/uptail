@@ -11,6 +11,7 @@
 
   {% block stylesheets %}
     {% do assets.addCss('theme://css-compiled/global.css',100) %}
+    {% do assets.addCss('theme://css/vidbg.css',100) %}
     {% do assets.addCss('theme://css/custom.css',100) %}
     {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -26,6 +27,7 @@
     {% do assets.addJs('theme://js/jquery.easing.min.js',{'group':'bottom'}) %}
     {% do assets.addJs('theme://js/classie.js',{'group':'bottom'}) %}
     {% do assets.addJs('theme://js/cbpAnimatedHeader.js',{'group':'bottom'}) %}
+    {% do assets.addJs('theme://js/vidbg.js',{'group':'bottom'}) %}
     {% do assets.addJs('theme://js/agency.js',{'group':'bottom'}) %}
   {% endblock %}
 

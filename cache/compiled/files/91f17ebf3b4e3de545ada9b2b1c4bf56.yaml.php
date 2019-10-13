@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/Xampp/htdocs/uptail/user/config/site.yaml',
-    'modified' => 1569787311,
+    'modified' => 1570956032,
     'data' => [
         'title' => 'Uptail',
         'author' => [
@@ -20,16 +20,12 @@ return [
                 'url' => '#services'
             ],
             1 => [
-                'title' => 'Products',
-                'url' => '#products'
+                'title' => 'Solutions',
+                'url' => '#solutions'
             ],
             2 => [
                 'title' => 'Training',
                 'url' => '#training'
-            ],
-            3 => [
-                'title' => 'Company',
-                'url' => '#company'
             ]
         ],
         'social' => [

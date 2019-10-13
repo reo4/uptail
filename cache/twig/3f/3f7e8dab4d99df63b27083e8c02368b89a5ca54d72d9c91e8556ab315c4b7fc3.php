@@ -29,7 +29,7 @@ class __TwigTemplate_20d41e89fb31c537faf2a2911e32d8f3caee774099609f6b2aad18075cf
         // line 1
         echo " <section id=\"";
         echo $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "menu", []);
-        echo "\" class=\"dasdsa bg-light-gray\">
+        echo "\" class=\"bg-light-gray\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">
@@ -181,7 +181,7 @@ class __TwigTemplate_20d41e89fb31c537faf2a2911e32d8f3caee774099609f6b2aad18075cf
 
     public function getSourceContext()
     {
-        return new Source(" <section id=\"{{page.header.menu}}\" class=\"dasdsa bg-light-gray\">
+        return new Source(" <section id=\"{{page.header.menu}}\" class=\"bg-light-gray\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">

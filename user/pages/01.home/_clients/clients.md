@@ -1,6 +1,7 @@
 ---
 title: Clients
 menu: clients
+hide: true
 clients:
     - logo: css.jpg
       url: "http://www.w3.org/Style/CSS/Overview.en.html"

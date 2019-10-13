@@ -27,7 +27,7 @@ class __TwigTemplate_f1214900868661b3a82e4cd2ce1a17e50f082d87eb3422573ca4cfebe03
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<header>
+        echo "<header class=\"video-wrapper\">
     <div class=\"container\">
         <div class=\"intro-text\">
             ";
@@ -81,7 +81,7 @@ class __TwigTemplate_f1214900868661b3a82e4cd2ce1a17e50f082d87eb3422573ca4cfebe03
 
     public function getSourceContext()
     {
-        return new Source("<header>
+        return new Source("<header class=\"video-wrapper\">
     <div class=\"container\">
         <div class=\"intro-text\">
             {{ content }}
