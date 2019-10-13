@@ -1,6 +1,6 @@
 ---
 theme: quark
-title: Home
+title: Blog
 sitemap:
     changefreq: monthly
 body_classes: 'header-dark header-transparent'

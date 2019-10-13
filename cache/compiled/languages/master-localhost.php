@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1570946066,
-    'checksum' => '61bbb020a1a5c164670e61a4e0db4ea1',
+    'timestamp' => 1570984920,
+    'checksum' => '143bd0756b703bbe9c84b9d79a431126',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -183,9 +183,25 @@ return [
                 'file' => 'user/plugins/form/languages.yaml',
                 'modified' => 1568933233
             ],
+            'plugins/pagination' => [
+                'file' => 'user/plugins/pagination/languages.yaml',
+                'modified' => 1561152258
+            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/languages.yaml',
                 'modified' => 1568933234
+            ],
+            'plugins/relatedpages' => [
+                'file' => 'user/plugins/relatedpages/languages.yaml',
+                'modified' => 1561152261
+            ],
+            'plugins/simplesearch' => [
+                'file' => 'user/plugins/simplesearch/languages.yaml',
+                'modified' => 1561152261
+            ],
+            'plugins/sitemap' => [
+                'file' => 'user/plugins/sitemap/languages.yaml',
+                'modified' => 1561152262
             ],
             'plugins/smoochchat' => [
                 'file' => 'user/plugins/smoochchat/languages.yaml',
@@ -1386,6 +1402,45 @@ Sie haben **2FA** für dieses Konto aktiviert. Bitte benutzen Sie Ihre **2FA** A
                 'DESTINATION_NOT_SPECIFIED' => 'Zielort nicht definiert',
                 'INVALID_MIME_TYPE' => 'Der MIME-Type %s für die Datei %s ist nicht erlaubt.',
                 'INVALID_FILE_EXTENSION' => 'Die Dateiendung %s ist nicht erlaubt.'
+            ],
+            'PLUGIN_REL_PAGES' => [
+                'PLUGIN_STATUS' => 'Plugin-Status',
+                'BASICS' => 'Grundeinstellungen',
+                'LIMIT' => 'Angezeigt',
+                'LIMIT_HELP' => 'Die Anzahl der angezeigten verwandten Seiten',
+                'ORDER' => 'Reihenfolge',
+                'ORDER_BY' => 'Sortiert nach',
+                'SHOW_SCORE' => 'Zeige Bewertung',
+                'SHOW_SCORE_HELP' => 'Umschalter, ob die Bewertung in der Ausgabe angezeigt werden soll',
+                'ITEMS' => 'Elemente',
+                'ITEMS_HELP' => 'Unterstützt `@self`, `@page`, und `@taxonomy` basierte Sammlungen (collections)',
+                'PAGE_IN_FILTER' => 'Seite \'drin\' Filter',
+                'PAGE_IN_FILTER_HELP' => 'Aktiviert, wenn die aktuelle Seite in der gefilterten Sammlung (collection) enthalten sein muss',
+                'EXPLICIT_PROCESS' => 'Verarbeite explizite Seiten',
+                'EXPLICIT_PROCESS_HELP' => 'Aktiviere diesen Abgleich der expliziten Seiten',
+                'EXPLICIT_SCORE' => 'Bewertung der expliziten Seiten',
+                'EXPLICIT_SCORE_HELP' => 'Eine Bewertung von (0 - 100) um expliziten Seiten eine Gewichtung zu geben',
+                'TAXONOMY_MATCH' => 'Abgleich der Taxonomie-Typen',
+                'TAXONOMY' => 'Taxonomie',
+                'TAXONOMY_HELP' => 'Welcher Taxonomie-Typ soll für den Seiten-Abgleich genutzt werden',
+                'TAXONOMY_TAXONOMY_PROCESS' => 'Taxonomie-Taxonomie',
+                'TAXONOMY_TAXONOMY_PROCESS_HELP' => 'Aktiviere die Taxonomie für den Taxonomie-Abgleich',
+                'TAXONOMY_CONTENT_PROCESS' => 'Taxonomie-Inhalt',
+                'TAXONOMY_CONTENT_PROCESS_HELP' => 'Aktiviere die Taxonomie für den Inhalts-Abgleich',
+                'CONTENT_MATCH' => 'Abgleich der Inhalts-Typen',
+                'CONTENT_PROCESS' => 'Inhalt-Inhalt',
+                'CONTENT_PROCESS_HELP' => 'Aktiviere den Inhalt-zu-Inhalt-Abgleich (Beachte: Deaktivieren bei viel Inhalt)',
+                'ADVANCED' => 'Erweitert',
+                'TAXONOMY_SCORE_SCALE' => 'Taxonomie-Taxonomie Bewertungsskala',
+                'CONTENT_SCORE_SCALE' => 'Taxonomie-Inhalt Bewertungsskala'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Suche …',
+                'SEARCH_RESULTS' => 'Suchergebnisse',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Suche: <strong>%s</strong> fand ein Ergebnis',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Suche: <strong>%s</strong> fand %s Ergebnisse',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Bitte geben Sie mindestens %s Zeichen ein',
+                'SEARCH_VALUE' => 'Suchen'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
@@ -2667,9 +2722,75 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'INVALID_MIME_TYPE' => 'The MIME type %s for the file %s is not accepted.',
                 'INVALID_FILE_EXTENSION' => 'The File Extension for the file %s is not accepted.'
             ],
+            'PLUGIN_PAGINATION' => [
+                'DELTA' => 'Delta',
+                'DELTA_HELP' => 'How many pages to show left and right of the current page',
+                'BUILTIN_CSS' => 'Use built in CSS',
+                'BUILTIN_CSS_HELP' => 'Include the CSS provided by the Pagination plugin'
+            ],
             'PLUGIN_PROBLEMS' => [
                 'BUILTIN_CSS' => 'Use built in CSS',
                 'BUILTIN_CSS_HELP' => 'Include the CSS provided by the Problems plugin'
+            ],
+            'PLUGIN_REL_PAGES' => [
+                'BASICS' => 'Basic Settings',
+                'LIMIT' => 'Limit',
+                'LIMIT_HELP' => 'The number of related pages to display',
+                'ORDER' => 'Order',
+                'ORDER_BY' => 'Ordery by',
+                'SHOW_SCORE' => 'Show score',
+                'SHOW_SCORE_HELP' => 'Toggle to determine if scores should be displayed in output',
+                'ITEMS' => 'Items',
+                'ITEMS_HELP' => 'Supports `@self`, `@page`, and `@taxonomy` based collections',
+                'PAGE_IN_FILTER' => 'Page \'in\' filter',
+                'PAGE_IN_FILTER_HELP' => 'Enabled if the current page must be in the filtered collection',
+                'EXPLICIT_PROCESS' => 'Process explicit pages',
+                'EXPLICIT_PROCESS_HELP' => 'Enable this explicit page matching',
+                'EXPLICIT_SCORE' => 'Explicit page score',
+                'EXPLICIT_SCORE_HELP' => 'A score ranging from (0 - 100) to give explicit pages a weight',
+                'TAXONOMY_MATCH' => 'Taxonomy Type Matching',
+                'TAXONOMY' => 'Taxonomy',
+                'TAXONOMY_HELP' => 'Which taxonomy type to use for page matching, supports strings or YAML array of multiple taxonomy types',
+                'TAXONOMY_TAXONOMY_PROCESS' => 'Taxonomy-taxonomy',
+                'TAXONOMY_TAXONOMY_PROCESS_HELP' => 'Enable taxonomy to taxonomy matching',
+                'TAXONOMY_CONTENT_PROCESS' => 'Taxonomy-content',
+                'TAXONOMY_CONTENT_PROCESS_HELP' => 'Enable taxonomy to Content matching',
+                'CONTENT_MATCH' => 'Content Type Matching',
+                'CONTENT_PROCESS' => 'Content-content',
+                'CONTENT_PROCESS_HELP' => 'Enable content to content matching (NOTE: Disable if you have lots of content)',
+                'ADVANCED' => 'Advanced',
+                'TAXONOMY_SCORE_SCALE' => 'Taxonomy-taxonomy score scale',
+                'CONTENT_SCORE_SCALE' => 'Taxonomy-content score scale'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Search …',
+                'SEARCH_RESULTS' => 'Search Results',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Query: <strong>%s</strong> found one result',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Query: <strong>%s</strong> found %s results',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Please add at least %s characters'
+            ],
+            'PLUGIN_SITEMAP' => [
+                'SITEMAP' => 'Sitemap',
+                'HEADER_CHANGEFREQ' => 'Sitemap change frequency',
+                'HEADER_PRIORITY' => 'Sitemap priority',
+                'CHANGEFREQ' => 'Global - sitemap change frequency',
+                'CHANGEFREQ_DEFAULT' => 'Use Global (daily)',
+                'CHANGEFREQ_ALWAYS' => 'Always',
+                'CHANGEFREQ_HOURLY' => 'Hourly',
+                'CHANGEFREQ_DAILY' => 'Daily',
+                'CHANGEFREQ_WEEKLY' => 'Weekly',
+                'CHANGEFREQ_MONTHLY' => 'Monthly',
+                'CHANGEFREQ_YEARLY' => 'Yearly',
+                'CHANGEFREQ_NEVER' => 'Never',
+                'PRIORITY' => 'Global - sitemap priority',
+                'PRIORITY_USE_GLOBAL' => 'Use Global (1)',
+                'ROUTE' => 'Route to sitemap',
+                'IGNORES' => 'Ignore',
+                'IGNORES_HELP' => 'URLs to ignore',
+                'ADDITIONS' => 'Additional URLs',
+                'ADDITIONS_HELP' => 'Add external URLs to the sitemap',
+                'LOCATION' => 'The URL location',
+                'LASTMOD' => 'Last modification e.g. 2017-04-06'
             ],
             'PLUGIN_SMOOCHCHAT' => [
                 'APP_ID' => 'App ID',
@@ -3788,6 +3909,42 @@ Tienes **2FA** habilitado en esta cuenta. Por favor usa tu aplicación **2FA** p
                 'RESOLUTION_MIN' => '{{attr}} fué menor que el mínimo {{min}}px <br />',
                 'RESOLUTION_MAX' => '{{attr}} fué mayor que el máximo {{max}}px <br />'
             ],
+            'PLUGIN_REL_PAGES' => [
+                'BASICS' => 'Ajustes básicos',
+                'LIMIT' => 'Límite',
+                'LIMIT_HELP' => 'La cantidad de páginas relacionas que se mostrarán',
+                'ORDER' => 'Ordenar',
+                'ORDER_BY' => 'Ordenar por',
+                'SHOW_SCORE' => 'Mostrar puntos',
+                'SHOW_SCORE_HELP' => 'Indica si se mostrará la puntuación',
+                'ITEMS' => 'Elementos',
+                'ITEMS_HELP' => 'Proporciona colecciones basadas en `@self`, `@page` y `@taxonomy`',
+                'PAGE_IN_FILTER' => 'Página \'en\' filtro',
+                'PAGE_IN_FILTER_HELP' => 'Activado si la página actual debe estar en la colección filtrada',
+                'EXPLICIT_PROCESS' => 'Procesar páginas explícitas',
+                'EXPLICIT_PROCESS_HELP' => 'Activa la relación de páginas explícitas',
+                'EXPLICIT_SCORE' => 'Puntuación de páginas explícitas',
+                'EXPLICIT_SCORE_HELP' => 'Una puntuación (entre 0 y 100) para dar un peso las páginas explícitas',
+                'TAXONOMY_MATCH' => 'Comparación de Tipo de taxonomía',
+                'TAXONOMY' => 'Taxonomía',
+                'TAXONOMY_HELP' => 'Qué tipo de taxonomía se usará para relacionar páginas',
+                'TAXONOMY_TAXONOMY_PROCESS' => 'Taxonomía-taxonomía',
+                'TAXONOMY_TAXONOMY_PROCESS_HELP' => 'Activa relación de taxonomía a taxonomía',
+                'TAXONOMY_CONTENT_PROCESS' => 'Taxonomía-contenido',
+                'TAXONOMY_CONTENT_PROCESS_HELP' => 'Activa relación de taxonomía a contenido',
+                'CONTENT_MATCH' => 'Relación de tipo de contenido',
+                'CONTENT_PROCESS' => 'Contenido-contenido',
+                'CONTENT_PROCESS_HELP' => 'Activa relación de contenido a contenido (NOTA: Desactive esto si tiene mucho contenido)',
+                'ADVANCED' => 'Avanzado',
+                'TAXONOMY_SCORE_SCALE' => 'Escala de puntuación Taxonomía-taxonomía',
+                'CONTENT_SCORE_SCALE' => 'Escala de puntuación Taxonomía-contenido'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Buscar …',
+                'SEARCH_RESULTS' => 'Resultados de la búsqueda',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Consulta: <strong>%s</strong> se encontró 1 resultado',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Consulta: <strong>%s</strong> se encontraron %s resultados'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 título: %1$s
@@ -4894,6 +5051,43 @@ L\'**authentification à deux facteurs** est activée sur ce compte. Veuillez ut
                 'INVALID_MIME_TYPE' => 'Le type MIME %s pour le fichier %s n’est pas accepté.',
                 'INVALID_FILE_EXTENSION' => 'L’extension pour le fichier %s n’est pas acceptée.'
             ],
+            'PLUGIN_REL_PAGES' => [
+                'BASICS' => 'Réglages de base',
+                'LIMIT' => 'Limite',
+                'LIMIT_HELP' => 'Le nombre de pages en relation à afficher',
+                'ORDER' => 'Classement',
+                'ORDER_BY' => 'Classement par',
+                'SHOW_SCORE' => 'Afficher le score',
+                'SHOW_SCORE_HELP' => 'Activer/désactiver afin de déterminer si les scores doivent être affichés en sortie',
+                'ITEMS' => 'Éléments',
+                'ITEMS_HELP' => 'Prise en charge des collections basées sur `@self`, `@page` et `@taxonomy`',
+                'PAGE_IN_FILTER' => 'Page \'dans\' le filtre',
+                'PAGE_IN_FILTER_HELP' => 'Activer si la page actuelle doit être présente dans la collection filtrée',
+                'EXPLICIT_PROCESS' => 'Traiter les pages explicites',
+                'EXPLICIT_PROCESS_HELP' => 'Activer la correspondance explicite pour cette page',
+                'EXPLICIT_SCORE' => 'Score explicite de la page',
+                'EXPLICIT_SCORE_HELP' => 'Un score compris entre (0 - 100) pour rendre une page explicite',
+                'TAXONOMY_MATCH' => 'Correspondance par type de taxonomie',
+                'TAXONOMY' => 'Taxonomie',
+                'TAXONOMY_HELP' => 'Quel type de taxonomie utiliser pour la correspondance des pages',
+                'TAXONOMY_TAXONOMY_PROCESS' => 'Taxonomie-taxonomie',
+                'TAXONOMY_TAXONOMY_PROCESS_HELP' => 'Activer la taxonomie pour la correspondance de taxonomie',
+                'TAXONOMY_CONTENT_PROCESS' => 'Taxonomie-contenu',
+                'TAXONOMY_CONTENT_PROCESS_HELP' => 'Activer la taxonomie pour la correspondance de contenu',
+                'CONTENT_MATCH' => 'Correspondance par type de contenu',
+                'CONTENT_PROCESS' => 'Contenu-contenu',
+                'CONTENT_PROCESS_HELP' => 'Activer la correspondance de contenu (NOTE : désactivez si vous avez beaucoup de contenu)',
+                'ADVANCED' => 'Avancés',
+                'TAXONOMY_SCORE_SCALE' => 'Taxonomie-niveau de score de taxonomie',
+                'CONTENT_SCORE_SCALE' => 'Taxonomie-niveau de score de contenu'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Recherche …',
+                'SEARCH_RESULTS' => 'Résultats de la recherche',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Recherche : Un résultat trouvé pour <strong>%s</strong>',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Recherche : %2$s résultats trouvés pour <strong>%1$s</strong>',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Veuillez ajouter au moins %s caractères'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 titre: %1$s
@@ -5711,6 +5905,12 @@ Chemin: `%2$s`
                 'ACCEPT' => 'Dopušteni MIME Tipovi',
                 'ACCEPT_HELP' => 'Lista dopuštenih MIME Tipova koji su dozvoljeni za upload',
                 'ERROR_VALIDATING_CAPTCHA' => 'Greška pri validiranju Captcha'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Traži …',
+                'SEARCH_RESULTS' => 'Rezultati pretrage',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Upit: <strong>%s</strong> je pronašao jedan rezultat',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Upit: <strong>%s</strong> je pronašao %s rezultata'
             ],
             'GRAV' => [
                 'INFLECTOR_UNCOUNTABLE' => [
@@ -8491,6 +8691,42 @@ Aveți **2FA** activată pentru acest cont. Vă rugăm folosiți aplicația pent
                 'RECAPTCHA_SECRET_KEY' => 'Cheia secretă pentru Site',
                 'RECAPTCHA_SECRET_KEY_HELP' => 'Pentru mai multe detalii vă rugăm vizitați  https://developers.google.com/recaptcha'
             ],
+            'PLUGIN_REL_PAGES' => [
+                'BASICS' => 'Setări de bază',
+                'LIMIT' => 'Limită',
+                'LIMIT_HELP' => 'Numărul afișat al paginilor legate',
+                'ORDER' => 'Ordinea',
+                'ORDER_BY' => 'Ordonează după',
+                'SHOW_SCORE' => 'Arată scorul',
+                'SHOW_SCORE_HELP' => 'Comutați pentru afișarea scorurilor',
+                'ITEMS' => 'Articole',
+                'ITEMS_HELP' => 'Acceptă colecții bazate pe `@self`, `@page` și `@taxonomy`',
+                'PAGE_IN_FILTER' => 'Filtru \'in\' pagină',
+                'PAGE_IN_FILTER_HELP' => 'Activează dacă pagina curentă trebuie să fie în colecția filtrată',
+                'EXPLICIT_PROCESS' => 'Procesează anumite pagini specifice',
+                'EXPLICIT_PROCESS_HELP' => 'Activează pentru procesarea anumitor pagini specifice',
+                'EXPLICIT_SCORE' => 'Scorul paginilor specifice',
+                'EXPLICIT_SCORE_HELP' => 'Un scor între (0 - 100) pentru a da unor pagini specifice greutate',
+                'TAXONOMY_MATCH' => 'Potrivire după Taxonomie',
+                'TAXONOMY' => 'Taxonomie',
+                'TAXONOMY_HELP' => 'Ce fel de taxonomie să fie folosită la potrivirea paginilor',
+                'TAXONOMY_TAXONOMY_PROCESS' => 'Taxonomie-taxonomie',
+                'TAXONOMY_TAXONOMY_PROCESS_HELP' => 'Activeazā potrivirea între taxonomii',
+                'TAXONOMY_CONTENT_PROCESS' => 'Taxonomie-conținut',
+                'TAXONOMY_CONTENT_PROCESS_HELP' => 'Activează potrivirea după taxonomie - conținut',
+                'CONTENT_MATCH' => 'Potrivirea după conținut',
+                'CONTENT_PROCESS' => 'Conținut-conținut',
+                'CONTENT_PROCESS_HELP' => 'Activează pentru potrivire după conținut (Notă: dezactivați dacă aveți conținut mult)',
+                'ADVANCED' => 'Avansat',
+                'TAXONOMY_SCORE_SCALE' => 'Scorul scalei Taxonomie-taxonomie',
+                'CONTENT_SCORE_SCALE' => 'Scorul scalei Taxonomie-conținut'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Caută …',
+                'SEARCH_RESULTS' => 'Rezultatele căutării',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Căutarea: <strong>%s</strong> a găsit un rezultat',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Căutarea: <strong>%s</strong> a găsit %s rezultate'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 Titlu: %1$s
@@ -9681,9 +9917,45 @@ Calea: `%2$s`
                 'INVALID_MIME_TYPE' => 'Тип MIME %s для файла %s не принимается.',
                 'INVALID_FILE_EXTENSION' => 'Расширение файла %s не является допустимым для файла.'
             ],
+            'PLUGIN_PAGINATION' => [
+                'DELTA' => 'Дельта',
+                'DELTA_HELP' => 'Сколько страниц показывать слева и справа от текущей страницы',
+                'BUILTIN_CSS' => 'Использовать встроенный CSS',
+                'BUILTIN_CSS_HELP' => 'Использовать CSS, предоставленный плагином Pagination'
+            ],
             'PLUGIN_PROBLEMS' => [
                 'BUILTIN_CSS' => 'Использовать встроенный CSS',
                 'BUILTIN_CSS_HELP' => 'Использовать CSS, предоставленный плагином Problems'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Найти …',
+                'SEARCH_RESULTS' => 'Результат поиска',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'По запросу: <strong>%s</strong> результатов найдено 1',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'По запросу: <strong>%s</strong> результатов найдено %s',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Добавьте не менее %s символов'
+            ],
+            'PLUGIN_SITEMAP' => [
+                'SITEMAP' => 'Карта сайта',
+                'HEADER_CHANGEFREQ' => 'Частота обновления карты сайта',
+                'HEADER_PRIORITY' => 'Приоритет карты сайта',
+                'CHANGEFREQ' => 'Глобальное - частота обновления карты сайта',
+                'CHANGEFREQ_DEFAULT' => 'Использовать глобальное (ежедневно)',
+                'CHANGEFREQ_ALWAYS' => 'Всегда',
+                'CHANGEFREQ_HOURLY' => 'Ежечасно',
+                'CHANGEFREQ_DAILY' => 'Ежедневно',
+                'CHANGEFREQ_WEEKLY' => 'Еженедельно',
+                'CHANGEFREQ_MONTHLY' => 'Ежемесячно',
+                'CHANGEFREQ_YEARLY' => 'Ежегодно',
+                'CHANGEFREQ_NEVER' => 'Никогда',
+                'PRIORITY' => 'Глобальное - приоритет карты сайта',
+                'PRIORITY_USE_GLOBAL' => 'Использовать глобальное (1)',
+                'ROUTE' => 'Маршрут к карте сайта',
+                'IGNORES' => 'Игнорировать',
+                'IGNORES_HELP' => 'URL-адреса для игнорирования',
+                'ADDITIONS' => 'Дополнительные URL',
+                'ADDITIONS_HELP' => 'Добавить внешние URL в карту сайта',
+                'LOCATION' => 'Расположение URL',
+                'LASTMOD' => 'Последнее изменение, например 2017-04-06'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
@@ -10568,9 +10840,38 @@ title: %1$s
                 'INVALID_MIME_TYPE' => 'Тип MIME %s для файла %s не приймається.',
                 'INVALID_FILE_EXTENSION' => 'Розширення файлу %s не є допустимим для файлу.'
             ],
+            'PLUGIN_PAGINATION' => [
+                'DELTA' => 'Дельта',
+                'DELTA_HELP' => 'Скільки сторінок відображатиметься ліворуч і праворуч від поточної сторінки',
+                'BUILTIN_CSS' => 'Використовувати вбудований CSS',
+                'BUILTIN_CSS_HELP' => 'Використовувати CSS, наданий плагіном Pagination'
+            ],
             'PLUGIN_PROBLEMS' => [
                 'BUILTIN_CSS' => 'Використовувати вбудований CSS',
                 'BUILTIN_CSS_HELP' => 'Використовувати CSS, наданий плагіном Problems'
+            ],
+            'PLUGIN_SITEMAP' => [
+                'SITEMAP' => 'Карта сайту',
+                'HEADER_CHANGEFREQ' => 'Частота оновлення карти сайту',
+                'HEADER_PRIORITY' => 'Пріоритет карти сайту',
+                'CHANGEFREQ' => 'Глобальне - частота оновлення карти сайту',
+                'CHANGEFREQ_DEFAULT' => 'Використовувати глобальне (щодня)',
+                'CHANGEFREQ_ALWAYS' => 'Завжди',
+                'CHANGEFREQ_HOURLY' => 'Погодинно',
+                'CHANGEFREQ_DAILY' => 'Щодня',
+                'CHANGEFREQ_WEEKLY' => 'Щотижня',
+                'CHANGEFREQ_MONTHLY' => 'Щомісячно',
+                'CHANGEFREQ_YEARLY' => 'Щорічно',
+                'CHANGEFREQ_NEVER' => 'Ніколи',
+                'PRIORITY' => 'Глобальне - пріоритет карта сайту',
+                'PRIORITY_USE_GLOBAL' => 'Використовувати глобальний (1)',
+                'ROUTE' => 'Маршрут до карти сайту',
+                'IGNORES' => 'Ігнорувати',
+                'IGNORES_HELP' => 'URL-адреси для ігнорування',
+                'ADDITIONS' => 'Додаткові URL-адреси',
+                'ADDITIONS_HELP' => 'Додати зовнішні URL-адреси до карти сайту',
+                'LOCATION' => 'Розташування URL-адреси',
+                'LASTMOD' => 'Остання модифікація, напр. 2017-04-06'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
@@ -13659,6 +13960,12 @@ Máte na svém účtu aktivováno **dvoufaktorové ověřování**. Pro dokonče
                 'YES' => 'Ano',
                 'NO' => 'Ne'
             ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Vyhledat …',
+                'SEARCH_RESULTS' => 'Výsledky hledání',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Hledání výrazu \'<strong>%s</strong>\' našlo jeden výsledek',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Hledání výrazu \'<strong>%s</strong>\' našlo %s výsledků'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -14722,6 +15029,12 @@ Du har **2FA** aktiveret for denne konto. Benyt venligst din **2FA**-app til at 
                 'DESTINATION_NOT_SPECIFIED' => 'Destination ikke angivet',
                 'INVALID_MIME_TYPE' => 'MIME typen %s for filen %s er ikke accepteret.',
                 'INVALID_FILE_EXTENSION' => 'Filendelsen for filen %s er ikke accepteret.'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Søg …',
+                'SEARCH_RESULTS' => 'Søgeresultat',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Søgning: <strong>%s</strong> fandt et resultat',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Søgning: <strong>%s</strong> fandt %s resultater'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
@@ -17520,6 +17833,12 @@ asukoht: `%2$s`
                 'SECURITY' => 'امنیت',
                 'REPORTS' => 'گزارش‌ها'
             ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'جستجو …',
+                'SEARCH_RESULTS' => 'نتایج جستجو',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'جستار: <strong>%s</strong> یک نتیجه یافت شد',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'جستار: <strong>%s</strong> %s نتیجه یافت شد'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 عنوان: %1$s
@@ -20083,6 +20402,13 @@ La **2FA** è abilitata per questo account. Si prega di utilizzare la vostra app
                 'YES' => 'Si',
                 'NO' => 'No'
             ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Cerca …',
+                'SEARCH_RESULTS' => 'Risultati della ricerca',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Ricerca: <strong>%s</strong>. Trovato un risultato',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Ricerca: <strong>%s</strong>. Trovati %s risultati',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Inserisci almeno %s caratteri'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---Titolo: %1$s---# Errore: Frontmatter non valido: \'%2$s\' * *%3$s * * \' \'%4$s \' \'',
                 'INFLECTOR_UNCOUNTABLE' => [
@@ -20838,6 +21164,12 @@ La **2FA** è abilitata per questo account. Si prega di utilizzare la vostra app
                 '2FA_CODE_INPUT' => '000000',
                 '2FA_SECRET' => '二段階認証',
                 '2FA_REGENERATE' => '再生成'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => '検索する …',
+                'SEARCH_RESULTS' => '検索結果',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => '検索 : <strong>%s</strong> に一つの結果があります。',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => '検索 : <strong>%s</strong> に %s の結果があります。'
             ],
             'GRAV' => [
                 'INFLECTOR_IRREGULAR' => [
@@ -22348,6 +22680,43 @@ Je hebt **2FA** aanstaan op dit account. Gebruik je **2FA** App om de huidige **
                 'RANDOM_NAME' => 'Willekeurige naam',
                 'RANDOM_NAME_HELP' => 'Genereer een willekeurige naam van 15 karakters voor de geuploade bestanden'
             ],
+            'PLUGIN_REL_PAGES' => [
+                'BASICS' => 'Basisinstellingen',
+                'LIMIT' => 'Limiet',
+                'LIMIT_HELP' => 'Het aantal weer te geven gerelateerde pagina\'s',
+                'ORDER' => 'Volgorde',
+                'ORDER_BY' => 'Sorteer op',
+                'SHOW_SCORE' => 'Toon score',
+                'SHOW_SCORE_HELP' => 'Schakel om, om te bepalen of scores moeten worden getoond in de uitvoer',
+                'ITEMS' => 'Items',
+                'ITEMS_HELP' => 'Ondersteunt collecties gebaseerd op `@self`, `@page`, en `@taxonomy`',
+                'PAGE_IN_FILTER' => 'Pagina \'in\' filter',
+                'PAGE_IN_FILTER_HELP' => 'Ingeschakeld als de huidige pagina in de gefilterde collectie moet zijn opgenomen',
+                'EXPLICIT_PROCESS' => 'Verwerk expliciete pagina\'s',
+                'EXPLICIT_PROCESS_HELP' => 'Inschakelen van matchen van expliete pagina\'s',
+                'EXPLICIT_SCORE' => 'Expliciete paginascore',
+                'EXPLICIT_SCORE_HELP' => 'Een score van (0 - 100) om expliciete pagina\'s een gewicht te geven',
+                'TAXONOMY_MATCH' => 'Taxonomie Type Matching',
+                'TAXONOMY' => 'Taxonomie',
+                'TAXONOMY_HELP' => 'Welk taxonomie type te gebruiken voor paginamatching',
+                'TAXONOMY_TAXONOMY_PROCESS' => 'Taxonomie-taxonomie',
+                'TAXONOMY_TAXONOMY_PROCESS_HELP' => 'Inschakelen taxonomie met taxonomie matching',
+                'TAXONOMY_CONTENT_PROCESS' => 'Taxonomie-inhoud',
+                'TAXONOMY_CONTENT_PROCESS_HELP' => 'Inschakelen taxonomie met inhoud matching',
+                'CONTENT_MATCH' => 'Inhoud Type Matching',
+                'CONTENT_PROCESS' => 'Inhoud-inhoud',
+                'CONTENT_PROCESS_HELP' => 'Inschakelen inhoud met inhoud matching (N.B.: Uitschakelen als je veel inhoud hebt)',
+                'ADVANCED' => 'Geavanceerd',
+                'TAXONOMY_SCORE_SCALE' => 'Taxonomie-taxonomie score schaal',
+                'CONTENT_SCORE_SCALE' => 'Taxonomie-inhoud score schaal'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Zoeken …',
+                'SEARCH_RESULTS' => 'Zoek resultaten',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Query: <strong>%s</strong> is 1 keer gevonden',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Query: <strong>%s</strong> is %s keer gevonden',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Geef minstens %s tekens in'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 titel: %1$s
@@ -23266,6 +23635,13 @@ Masz na tym koncie włączone **2FA**. Użyj aplikacji od **2FA** i wprowadź ak
                 'INVALID_MIME_TYPE' => 'Typ MIME %s dla pliku %s nie jest dozwolony.',
                 'INVALID_FILE_EXTENSION' => 'Rozszerzenie pliku %s nie jest dozwolone.'
             ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Szukaj…',
+                'SEARCH_RESULTS' => 'Wyniki wyszukiwania',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Znaleziono jeden wynik dla frazy <strong>%s</strong>.',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Znaleziono %2$s wyników dla frazy <strong>%1$s</strong>.',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Fraza musi składać się z minimum %s znaków.'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -23950,6 +24326,12 @@ Path: `%2$s`
                 'INLINE_ERRORS_HELP' => 'Útil se a validação no cliente estiver desabilitada. Mostra os erros próximo aos respectivos campos',
                 'RESOLUTION_MIN' => 'A {{attr}} é menor que o mínimo de {{min}}px <br />',
                 'RESOLUTION_MAX' => 'A {{attr}} é maior que o máximo de {{max}}px <br />'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'O que você procura?',
+                'SEARCH_RESULTS' => 'Resultados da pesquisa',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Pesquisa: <strong>%s</strong>. Foram encontrados 1 resultados',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Pesquisa: <strong>%s</strong>. Foram encontrados %s resultados'
             ],
             'GRAV' => [
                 'NICETIME' => [
@@ -26504,6 +26886,12 @@ Path: `%2$s`
                 'ALLOW_WEBSERVER_GZIP' => 'Tillåt WebServer Gzip',
                 'OFFLINE_WARNING' => 'Anslutningen till GPM inte kan fastställas',
                 'CLI_COMPATIBILITY' => 'CLI kompatibilitet'
+            ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'Sök …',
+                'SEARCH_RESULTS' => 'Sökresultat',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Sökning: <strong>%s</strong> hittade ett resultat',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Sökning: <strong>%s</strong> hittade %s resultat'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '--- titel: %1$s --- # Fel: Ogiltig Frontmatter-sökväg: `%2$s` **%3$s** ``` %4$s ```',
@@ -29137,6 +29525,12 @@ tiêu đề: %1$s
                 'ERROR' => '错误',
                 'ERROR_MESSAGE' => '呃，似乎这个页面不存在。'
             ],
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => '搜索 …',
+                'SEARCH_RESULTS' => '搜索结果',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => '查询: <strong>%s</strong> 找到 1 个结果',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => '查询: <strong>%s</strong> 找到 %s 个结果'
+            ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
 标题: %1$s
@@ -30089,6 +30483,15 @@ title: %1$s
                     5 => '星期六',
                     6 => '星期日'
                 ]
+            ]
+        ],
+        'kk' => [
+            'PLUGIN_SIMPLESEARCH' => [
+                'SEARCH_PLACEHOLDER' => 'іздеу …',
+                'SEARCH_RESULTS' => 'Іздеу нәтижесі',
+                'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'Сұраныс бойынша: <strong>%s</strong> табылды 1',
+                'SEARCH_RESULTS_SUMMARY_PLURAL' => 'Сұраныс бойынша: <strong>%s</strong> табылды %s',
+                'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Кемінде %s таңба қосу'
             ]
         ],
         'is' => [
