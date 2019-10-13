@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/Xampp/htdocs/uptail/system/config/system.yaml',
-    'modified' => 1568933229,
+    'modified' => 1570946485,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',

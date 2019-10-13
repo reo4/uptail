@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1569787314,
-    'checksum' => '65b74e194a2d5d3827d11e46712a353e',
+    'timestamp' => 1570949029,
+    'checksum' => '89c840959f10a6d089996f34663695b0',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -35,7 +35,11 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1569783361
+                'modified' => 1570949004
+            ],
+            'themes/quark' => [
+                'file' => 'user/config/themes/quark.yaml',
+                'modified' => 1561152255
             ]
         ],
         'system/config' => [
@@ -61,7 +65,7 @@ return [
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1568933229
+                'modified' => 1570946485
             ]
         ],
         'user/plugins' => [
@@ -100,6 +104,10 @@ return [
             'plugins/smoochchat' => [
                 'file' => 'user/plugins/smoochchat/smoochchat.yaml',
                 'modified' => 1569430616
+            ],
+            'plugins/themer' => [
+                'file' => 'user/plugins/themer/themer.yaml',
+                'modified' => 1570945823
             ]
         ]
     ],
@@ -307,6 +315,10 @@ return [
             'smoochchat' => [
                 'enabled' => true,
                 'app_id' => '5d8b9c325e3f9500108749e5'
+            ],
+            'themer' => [
+                'enabled' => true,
+                'templates' => ''
             ]
         ],
         'backups' => [
@@ -790,7 +802,7 @@ node_modules'
                 'hide_in_urls' => false
             ],
             'pages' => [
-                'theme' => 'agency',
+                'theme' => 'quark',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'
@@ -915,7 +927,7 @@ node_modules'
                 ]
             ],
             'debugger' => [
-                'enabled' => false,
+                'enabled' => true,
                 'shutdown' => [
                     'close_connection' => true
                 ],
@@ -968,6 +980,11 @@ node_modules'
         ],
         'scheduler' => [
             
+        ],
+        'themes' => [
+            'quark' => [
+                'grid-size' => 'grid-xl'
+            ]
         ]
     ]
 ];

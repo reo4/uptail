@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1569783371,
-    'checksum' => 'a503eaf86dc9dd2472f1c42ca6fccc82',
+    'timestamp' => 1570946066,
+    'checksum' => '61bbb020a1a5c164670e61a4e0db4ea1',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -190,6 +190,10 @@ return [
             'plugins/smoochchat' => [
                 'file' => 'user/plugins/smoochchat/languages.yaml',
                 'modified' => 1569430199
+            ],
+            'plugins/themer' => [
+                'file' => 'user/plugins/themer/languages.yaml',
+                'modified' => 1570945823
             ]
         ],
         'user/plugins/admin/languages' => [
@@ -1312,6 +1316,16 @@ Sie haben **2FA** für dieses Konto aktiviert. Bitte benutzen Sie Ihre **2FA** A
                     'CONTENT_DISMISS' => 'OK',
                     'CONTENT_LINK' => 'Weitere Informationen',
                     'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ],
+                'THEMER' => [
+                    'GLOBAL_CONFIG' => 'Globale Einstellungen',
+                    'PLUGIN_STATUS' => 'Plugin Status',
+                    'THEMER' => 'Themer',
+                    'TEMPLATES' => 'Theme Templates',
+                    'TEMPLATES_HELP' => 'Standard-Templates im Admin Panel (frei lassen um alle verfügbaren Templates anzuzeigen)',
+                    'TEMPLATES_PLACEHOLDER' => '- Zeige alle Templates -',
+                    'THEME' => 'Theme',
+                    'THEME_HELP' => 'Wähle ein Theme für diese Seite aus'
                 ]
             ],
             'PLUGIN_EMAIL' => [
@@ -2515,6 +2529,16 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                     'CONTENT_DISMISS' => 'Got it!',
                     'CONTENT_LINK' => 'Learn more',
                     'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ],
+                'THEMER' => [
+                    'GLOBAL_CONFIG' => 'Global plugin configurations',
+                    'PLUGIN_STATUS' => 'Plugin status',
+                    'THEMER' => 'Themer',
+                    'TEMPLATES' => 'Theme templates',
+                    'TEMPLATES_HELP' => 'Default theme page templates to show in admin panel (leave empty to show all page templates)',
+                    'TEMPLATES_PLACEHOLDER' => '- Show all page templates -',
+                    'THEME' => 'Theme',
+                    'THEME_HELP' => 'Select a theme for the page'
                 ]
             ],
             'PLUGIN_EMAIL' => [
@@ -4797,6 +4821,10 @@ L\'**authentification à deux facteurs** est activée sur ce compte. Veuillez ut
                     'CONTENT_DISMISS' => 'OK',
                     'CONTENT_LINK' => 'En savoir plus',
                     'CONTENT_HREF' => 'https://cookiesandyou.com'
+                ],
+                'THEMER' => [
+                    'GLOBAL_CONFIG' => 'Configurations générales du plugin',
+                    'PLUGIN_STATUS' => 'Statut du plugin'
                 ]
             ],
             'PLUGIN_EMAIL' => [

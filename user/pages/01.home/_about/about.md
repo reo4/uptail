@@ -1,10 +1,10 @@
 ---
-title: About
+title: Training
 menu: training
 abouts:
     - img: 1.jpg
-      heading: 2009-2011
-      subheading: Our Humble Beginnings.
+      heading: Day 1
+      subheading: Server-side development.
       body: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
       align: image
     - img: 2.jpg
@@ -30,5 +30,5 @@ abouts:
       align: inverted        
 ---
 
-## About
-### Lorem ipsum dolor sit amet consectetur.
+## Training
+### Retail developer ready in 6 days

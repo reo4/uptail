@@ -2,7 +2,6 @@ home:
   alias: '/home'
 
 pages:
-  theme: agency
   process:
     markdown: true
     twig: false
@@ -30,7 +29,7 @@ assets:
   js_minify: true
 
 debugger:
-  enabled: false
+  enabled: true
   twig: true
   shutdown:
     close_connection: true
