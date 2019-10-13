@@ -38,7 +38,7 @@ $('div.modal').on('show.bs.modal', function() {
 
 $(document).ready(function(){
     var instance = new vidbg('.video-wrapper', {
-        mp4: '/uptail/user/themes/agency/videos/cover.mp4',
+        mp4: 'user/themes/agency/videos/cover.mp4',
         overlay: true,
         overlayColor: '#000',
         overlayAlpha: 0.65
