@@ -1,10 +1,13 @@
 <header class="video-wrapper">
     <div class="container">
         <div class="intro-text">
-            {{ content }}
-            {% for button in page.header.buttons %}
-                <a class="page-scroll btn btn-xl" href="{{ button.url }}">{{ button.text }}</a>
-            {% endfor %}
+            <h2 class="head">{{page.header.head}}</h2>
+            <div class="bottom-section">
+	            <h4>{{page.header.description}}</h4>
+	            {% for button in page.header.buttons %}
+	                <a class="page-scroll btn btn-xl" href="{{ button.url }}">{{ button.text }}</a>
+	            {% endfor %}
+            </div>
         </div>
     </div>
 </header>

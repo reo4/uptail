@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1570985137,
-    'checksum' => '98784ea38c5f112c1217bf028cc06b2f',
+    'timestamp' => 1571511596,
+    'checksum' => 'dee2b3194d4813ceffdcb5e900a31e37',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -31,7 +31,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1570956032
+                'modified' => 1571510057
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -39,7 +39,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1570955566
+                'modified' => 1571511316
             ],
             'themes/quark' => [
                 'file' => 'user/config/themes/quark.yaml',
@@ -843,6 +843,14 @@ node_modules'
                 2 => [
                     'title' => 'Training',
                     'url' => '#training'
+                ],
+                3 => [
+                    'title' => 'About Us',
+                    'url' => '#contact'
+                ],
+                4 => [
+                    'title' => 'Blog',
+                    'url' => '/blog'
                 ]
             ],
             'social' => [
@@ -1065,7 +1073,7 @@ node_modules'
                 ]
             ],
             'debugger' => [
-                'enabled' => false,
+                'enabled' => true,
                 'shutdown' => [
                     'close_connection' => true
                 ],

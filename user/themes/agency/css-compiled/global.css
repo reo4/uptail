@@ -6928,15 +6928,36 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: Helvetica, Arial, cursive;
+  background-color: white;
+  display: inline-block;
+  height: unset;
+  border-radius: 3px;
+  padding-bottom: 13px;
+  box-shadow: 0px 4px 8px #292929;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:visited, .navbar-default .navbar-brand:focus {
+  background-color: white;
+}
+.navbar-default .navbar-brand .brand-up {
   color: #314DF1;
+  margin-right: -8px;
+  font-weight: bold;
+}
+.navbar-default .navbar-brand .brand-tail {
+  font-weight: bold;
+  color: black;
+}
+.navbar-default .navbar-brand p {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: black;
+  text-align: center;
 }
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
-  color: #314DF1;
+.navbar-shrink .navbar-brand p {
+  display: none;
 }
 
 .navbar-default .navbar-collapse {
@@ -7027,8 +7048,22 @@ header {
 }
 
 header .intro-text {
+  display: flex;
+  flex-direction: column;
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
+}
+header .intro-text h2 {
+  margin-bottom: 18rem;
+  max-width: 500px;
+  text-align: left;
+}
+header .intro-text .bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .intro-text .bottom-section h4 {
+  margin-right: auto;
 }
 
 header h1 {
@@ -7040,19 +7075,9 @@ header h1 {
   text-transform: none;
 }
 
-header h2 {
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 50px;
-}
-
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 220px;
   }
 
   header .intro-text h1 {
@@ -7061,15 +7086,6 @@ header h2 {
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
-  }
-
-  header .intro-text h2 {
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 75px;
-    font-weight: 700;
-    line-height: 75px;
   }
 }
 section {

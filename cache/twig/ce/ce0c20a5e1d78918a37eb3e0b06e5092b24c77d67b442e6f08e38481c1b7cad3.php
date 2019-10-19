@@ -36,7 +36,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
         echo ">
     ";
         // line 4
-        echo $context["macros"]->getnav_loop(($context["page"] ?? null));
+        echo $context["macros"]->getnav_loop(($context["pages"] ?? null));
         echo "
 </ul>
 
@@ -71,7 +71,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
         return new Source("{% import 'macros/macros.html.twig' as macros %}
 
 <ul {{ tree ? 'class=\"tree\"' : '' }}>
-    {{ macros.nav_loop(page) }}
+    {{ macros.nav_loop(pages) }}
 </ul>
 
 ", "partials/navigation.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\quark\\templates\\partials\\navigation.html.twig");

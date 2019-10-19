@@ -1,5 +1,8 @@
 ---
 theme: agency
+brand:
+ - Up
+ - Tail
 title: Home
 menu: Home
 onpage_menu: true

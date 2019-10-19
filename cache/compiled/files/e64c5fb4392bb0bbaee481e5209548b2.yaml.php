@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/Xampp/htdocs/uptail/user/config/system.yaml',
-    'modified' => 1570955566,
+    'modified' => 1571511316,
     'data' => [
         'home' => [
             'alias' => '/home'
@@ -38,7 +38,7 @@ return [
             'js_minify' => true
         ],
         'debugger' => [
-            'enabled' => false,
+            'enabled' => true,
             'twig' => true,
             'shutdown' => [
                 'close_connection' => true

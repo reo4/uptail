@@ -19,8 +19,10 @@ links:
     url: '#solutions'
   - title: Training
     url: '#training'
-  # - title: Company
-  #   url: '#company'         
+  - title: About Us
+    url: '#contact'         
+  - title: Blog
+    url: '/blog'         
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
