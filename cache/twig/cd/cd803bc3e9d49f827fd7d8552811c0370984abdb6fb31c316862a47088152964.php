@@ -28,7 +28,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
     {
         // line 1
         echo "<!-- Navigation -->
-<nav class=\"navbar navbar-default navbar-fixed-top\">
+<nav class=\"navbar navbar-default navbar-fixed-top navbar-shrink\">
     <div class=\"container\">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class=\"navbar-header page-scroll\">
@@ -63,7 +63,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
             <ul class=\"nav navbar-nav navbar-right\">
-                <li>
+                <li class=\"active\">
                     <a href=\"#page-top\">Home</a>
                 </li>
                 ";
@@ -143,7 +143,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
     public function getSourceContext()
     {
         return new Source("<!-- Navigation -->
-<nav class=\"navbar navbar-default navbar-fixed-top\">
+<nav class=\"navbar navbar-default navbar-fixed-top navbar-shrink\">
     <div class=\"container\">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class=\"navbar-header page-scroll\">
@@ -164,7 +164,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
             <ul class=\"nav navbar-nav navbar-right\">
-                <li>
+                <li class=\"active\">
                     <a href=\"#page-top\">Home</a>
                 </li>
                 {% for link in site.links %}

@@ -117,10 +117,10 @@ class __TwigTemplate_42d49ceca9ab7252372a5f4d53e13e0e08dabc6768293823fa861013586
     {
         // line 13
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/global.css", 1 => 100], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/vidbg.css", 1 => 100], "method");
         // line 14
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/vidbg.css", 1 => 100], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/global.css", 1 => 100], "method");
         // line 15
         echo "    ";
         $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 100], "method");
@@ -266,8 +266,8 @@ class __TwigTemplate_42d49ceca9ab7252372a5f4d53e13e0e08dabc6768293823fa861013586
   {% endblock %}
 
   {% block stylesheets %}
-    {% do assets.addCss('theme://css-compiled/global.css',100) %}
     {% do assets.addCss('theme://css/vidbg.css',100) %}
+    {% do assets.addCss('theme://css-compiled/global.css',100) %}
     {% do assets.addCss('theme://css/custom.css',100) %}
     {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
     <link href=\"//fonts.googleapis.com/css?family=Montserrat:400,700\" rel=\"stylesheet\" type=\"text/css\">

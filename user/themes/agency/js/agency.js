@@ -41,6 +41,6 @@ $(document).ready(function(){
         mp4: 'user/themes/agency/videos/cover.mp4',
         overlay: true,
         overlayColor: '#000',
-        overlayAlpha: 0.65
+        overlayAlpha: 0.4
     })
 })
