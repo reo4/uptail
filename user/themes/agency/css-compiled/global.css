@@ -6942,7 +6942,7 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-default .navbar-brand .brand-tail {
   font-weight: bold;
-  color: white;
+  color: black;
 }
 .navbar-default .navbar-brand p {
   font-weight: bold;
@@ -7023,7 +7023,7 @@ fieldset[disabled] .btn-xl.active {
 
   .navbar-default.navbar-shrink {
     padding: 10px 0;
-    background-color: #222;
+    background-color: #fff;
   }
 
   .navbar-default.navbar-shrink .navbar-brand {
@@ -7682,6 +7682,13 @@ footer ul.quicklinks {
     padding-top: 350px;
   }
 }
+.navbar-default .nav li a {
+  color: black;
+}
+.navbar-default .nav li a:focus {
+  color: black;
+}
+
 .nav > li > a {
   padding-right: 12px;
   padding-left: 12px;

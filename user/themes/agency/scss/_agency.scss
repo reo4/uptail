@@ -207,7 +207,7 @@ fieldset[disabled] .btn-xl.active {
     }
     .brand-tail{
         font-weight: bold;
-        color: white;
+        color: black;
     }
     p {
         font-weight: bold;
@@ -291,7 +291,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #fff;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -949,6 +949,13 @@ footer ul.quicklinks {
 @media(min-width: 1120px){
     header .intro-text {
         padding-top: 350px;
+    }
+}
+
+.navbar-default .nav li a {
+    color: black;
+    &:focus {
+        color: black
     }
 }
 
