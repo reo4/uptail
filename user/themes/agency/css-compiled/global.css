@@ -7048,7 +7048,7 @@ header .intro-text {
   display: flex;
   flex-direction: column;
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
 }
 header .intro-text h2 {
   margin-bottom: 18rem;
@@ -7679,7 +7679,7 @@ footer ul.quicklinks {
 
 @media (min-width: 1120px) {
   header .intro-text {
-    padding-top: 350px;
+    padding-top: 200px;
   }
 }
 .navbar-default .nav li a {
@@ -7696,6 +7696,17 @@ footer ul.quicklinks {
 
 .navbar-default {
   background-color: white;
+}
+
+.brand-box {
+  margin-left: 20px;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.nav.navbar-nav.navbar-right {
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=global.css.map */

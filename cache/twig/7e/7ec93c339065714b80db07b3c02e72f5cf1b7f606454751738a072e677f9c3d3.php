@@ -34,7 +34,7 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
                 <span class=\"copyright\">Copyright &copy; ";
         // line 5
         echo $this->getAttribute(($context["site"] ?? null), "title", []);
-        echo " 2014</span>
+        echo " 2017</span>
             </div>
             <div class=\"col-md-4\">
                 <ul class=\"list-inline social-buttons\">
@@ -114,7 +114,7 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
     <div class=\"container\">
         <div class=\"row\">
             <div class=\"col-md-4\">
-                <span class=\"copyright\">Copyright &copy; {{ site.title }} 2014</span>
+                <span class=\"copyright\">Copyright &copy; {{ site.title }} 2017</span>
             </div>
             <div class=\"col-md-4\">
                 <ul class=\"list-inline social-buttons\">

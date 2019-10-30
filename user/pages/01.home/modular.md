@@ -13,8 +13,8 @@ content:
         dir: asc
         custom:
             - _header
-            - _services
             - _portfolio
+            - _services
             - _about
             - _team
             - _clients

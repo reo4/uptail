@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1571511596,
-    'checksum' => 'dee2b3194d4813ceffdcb5e900a31e37',
+    'timestamp' => 1572440005,
+    'checksum' => '8f80141029c5d0193ebe608a9a2ed132',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -31,7 +31,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1571510057
+                'modified' => 1572440004
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -805,7 +805,7 @@ node_modules'
             'salt' => 'bME8flALKNxH0G'
         ],
         'site' => [
-            'title' => 'Uptail',
+            'title' => 'UpTail',
             'default_lang' => 'en',
             'author' => [
                 'name' => 'Joe Bloggs',
@@ -833,38 +833,26 @@ node_modules'
             'description' => 'Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.',
             'links' => [
                 0 => [
-                    'title' => 'Services',
-                    'url' => '#services'
-                ],
-                1 => [
                     'title' => 'Solutions',
                     'url' => '#solutions'
                 ],
-                2 => [
-                    'title' => 'Training',
-                    'url' => '#training'
+                1 => [
+                    'title' => 'Services',
+                    'url' => '#services'
                 ],
-                3 => [
-                    'title' => 'About Us',
+                2 => [
+                    'title' => 'Contact us',
                     'url' => '#contact'
                 ],
-                4 => [
+                3 => [
                     'title' => 'Blog',
                     'url' => '/blog'
                 ]
             ],
             'social' => [
                 0 => [
-                    'title' => 'twitter',
-                    'url' => 'http://twitter.com/jekyllrb'
-                ],
-                1 => [
-                    'title' => 'facebook',
-                    'url' => NULL
-                ],
-                2 => [
                     'title' => 'linkedin',
-                    'url' => 'linkedin'
+                    'url' => 'https://www.linkedin.com/company/18769166/admin/'
                 ]
             ],
             'address' => [

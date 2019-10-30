@@ -29,7 +29,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
         // line 1
         echo "<!-- Navigation -->
 <nav class=\"navbar navbar-default navbar-fixed-top navbar-shrink\">
-    <div class=\"container\">
+    <div class=\"container-fluid\">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class=\"navbar-header page-scroll\">
             <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
@@ -38,26 +38,28 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand page-scroll\" href=\"#page-top\">
-                ";
-        // line 13
+            <div class=\"brand-box\">
+                <a class=\"navbar-brand page-scroll\" href=\"#page-top\">
+                    ";
+        // line 14
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "brand", []));
         foreach ($context['_seq'] as $context["_key"] => $context["word"]) {
-            // line 14
-            echo "                    <span class=\"";
+            // line 15
+            echo "                        <span class=\"";
             echo ("brand-" . strtolower($context["word"]));
             echo "\">";
             echo $context["word"];
             echo "</span>
-                ";
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['word'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 16
-        echo "                <p>Smart Retail</p>
-            </a>
+        // line 17
+        echo "                </a>
+                <p><strong>Smart solutions for retail</strong></p>
+            </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,32 +69,32 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
                     <a href=\"#page-top\">Home</a>
                 </li>
                 ";
-        // line 26
+        // line 28
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["site"] ?? null), "links", []));
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 27
+            // line 29
             echo "                    ";
             if ($this->env->getExtension('Grav\Common\Twig\TwigExtension')->containsFilter($this->getAttribute($context["link"], "url", []), "http")) {
-                // line 28
+                // line 30
                 echo "                        ";
                 $context["domain"] = "";
-                // line 29
+                // line 31
                 echo "                            ";
             } elseif ($this->env->getExtension('Grav\Common\Twig\TwigExtension')->containsFilter($this->getAttribute($context["link"], "url", []), "#")) {
-                // line 30
+                // line 32
                 echo "                            ";
                 $context["domain"] = "";
-                // line 31
-                echo "                                ";
-            } else {
-                // line 32
-                echo "                                ";
-                $context["domain"] = ($context["base_url_absolute"] ?? null);
                 // line 33
                 echo "                                ";
+            } else {
+                // line 34
+                echo "                                ";
+                $context["domain"] = ($context["base_url_absolute"] ?? null);
+                // line 35
+                echo "                                ";
             }
-            // line 34
+            // line 36
             echo "                                <li><a class=\"page-scroll\" href=\"";
             echo ($context["domain"] ?? null);
             echo $this->getAttribute($context["link"], "url", []);
@@ -108,7 +110,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['link'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 38
         echo "                        </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -129,7 +131,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
 
     public function getDebugInfo()
     {
-        return array (  112 => 36,  96 => 34,  93 => 33,  90 => 32,  87 => 31,  84 => 30,  81 => 29,  78 => 28,  75 => 27,  71 => 26,  59 => 16,  48 => 14,  44 => 13,  30 => 1,);
+        return array (  114 => 38,  98 => 36,  95 => 35,  92 => 34,  89 => 33,  86 => 32,  83 => 31,  80 => 30,  77 => 29,  73 => 28,  60 => 17,  49 => 15,  45 => 14,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -144,7 +146,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
     {
         return new Source("<!-- Navigation -->
 <nav class=\"navbar navbar-default navbar-fixed-top navbar-shrink\">
-    <div class=\"container\">
+    <div class=\"container-fluid\">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class=\"navbar-header page-scroll\">
             <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
@@ -153,12 +155,14 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand page-scroll\" href=\"#page-top\">
-                {% for word in page.header.brand %}
-                    <span class=\"{{'brand-' ~ strtolower(word) }}\">{{word}}</span>
-                {% endfor %}
-                <p>Smart Retail</p>
-            </a>
+            <div class=\"brand-box\">
+                <a class=\"navbar-brand page-scroll\" href=\"#page-top\">
+                    {% for word in page.header.brand %}
+                        <span class=\"{{'brand-' ~ strtolower(word) }}\">{{word}}</span>
+                    {% endfor %}
+                </a>
+                <p><strong>Smart solutions for retail</strong></p>
+            </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

@@ -29,7 +29,7 @@ class __TwigTemplate_e66b4de8cbe0010d25d57135aff4b0e96716e3cd84ee928a959785effb4
         // line 1
         echo "<section id=\"";
         echo $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "menu", []);
-        echo "\">
+        echo "\" style=\"display:none\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">
@@ -128,7 +128,7 @@ class __TwigTemplate_e66b4de8cbe0010d25d57135aff4b0e96716e3cd84ee928a959785effb4
 
     public function getSourceContext()
     {
-        return new Source("<section id=\"{{page.header.menu}}\">
+        return new Source("<section id=\"{{page.header.menu}}\" style=\"display:none\">
   <div class=\"container\">
     <div class=\"row\">
         <div class=\"col-lg-12 text-center\">

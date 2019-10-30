@@ -1,4 +1,4 @@
-title: Uptail
+title: UpTail
 author:
   name: Joe Bloggs
   email: 'joe@test.com'
@@ -13,25 +13,21 @@ description: "Write an awesome description for your new site here. You can edit 
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: Services
-    url: '#services'
   - title: Solutions
     url: '#solutions'
-  - title: Training
-    url: '#training'
-  - title: About Us
+  - title: Services
+    url: '#services'
+  # - title: Training
+  #   url: '#training'
+  - title: Contact us
     url: '#contact'         
   - title: Blog
     url: '/blog'         
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
   - title: linkedin
-    url: linkedin
+    url: https://www.linkedin.com/company/18769166/admin/
   # - title: bitbucket 
   #   url: http://bitbucket.org/jekyll
   # - title: github
