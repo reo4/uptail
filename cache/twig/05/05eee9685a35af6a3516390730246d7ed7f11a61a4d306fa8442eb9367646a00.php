@@ -45,7 +45,7 @@ class __TwigTemplate_22b8902a569320c49abd4b431d4412e73c8762748f5a1b912e2c1fa80d9
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "buttons", []));
         foreach ($context['_seq'] as $context["_key"] => $context["button"]) {
             // line 8
-            echo "\t                <a class=\"page-scroll btn btn-xl\" href=\"";
+            echo "\t                <a class=\"btn btn-xl\" href=\"";
             echo $this->getAttribute($context["button"], "url", []);
             echo "\">";
             echo $this->getAttribute($context["button"], "text", []);
@@ -94,7 +94,7 @@ class __TwigTemplate_22b8902a569320c49abd4b431d4412e73c8762748f5a1b912e2c1fa80d9
             <div class=\"bottom-section\">
 \t            <h4>{{page.header.description}}</h4>
 \t            {% for button in page.header.buttons %}
-\t                <a class=\"page-scroll btn btn-xl\" href=\"{{ button.url }}\">{{ button.text }}</a>
+\t                <a class=\"btn btn-xl\" href=\"{{ button.url }}\">{{ button.text }}</a>
 \t            {% endfor %}
             </div>
         </div>

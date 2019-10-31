@@ -34,6 +34,11 @@ $('div.modal').on('show.bs.modal', function() {
 			$(modal).modal('hide');
 		}
 	}
+    $(document).keyup(function(e) {
+       if (e.key === "Escape") {
+        $(modal).modal('hide');
+       }
+   });
 });
 
 $(document).ready(function(){
@@ -45,4 +50,7 @@ $(document).ready(function(){
             overlayAlpha: 0.4
         })
     }
+    $('a[href="#about"]').click(function () {
+        $('a[href="#portfolioModal1"]').click()
+    })
 })

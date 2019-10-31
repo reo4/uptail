@@ -7709,4 +7709,18 @@ footer ul.quicklinks {
   margin-right: 20px;
 }
 
+.portfolio-link {
+  transition: all 0.3s;
+  display: block;
+  padding: 0;
+}
+
+.portfolio-link:hover {
+  padding: 10px;
+}
+
+.portfolio-caption {
+  margin-top: 2rem;
+}
+
 /*# sourceMappingURL=global.css.map */

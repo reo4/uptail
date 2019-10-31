@@ -975,3 +975,14 @@ footer ul.quicklinks {
     margin-top: 10px;
     margin-right: 20px;
 }
+.portfolio-link {
+    transition: all .3s;
+    display: block;
+    padding: 0;
+}
+.portfolio-link:hover{
+    padding: 10px;
+}
+.portfolio-caption{
+    margin-top: 2rem;
+}

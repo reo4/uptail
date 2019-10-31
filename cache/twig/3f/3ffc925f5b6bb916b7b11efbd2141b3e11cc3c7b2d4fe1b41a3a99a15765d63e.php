@@ -19,6 +19,7 @@ class __TwigTemplate_dd9dd85ac2a58117146135b0419c89c020eb296aeeb3712ae088c09b224
         parent::__construct($env);
 
         $this->blocks = [
+            'body' => [$this, 'block_body'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -39,35 +40,44 @@ class __TwigTemplate_dd9dd85ac2a58117146135b0419c89c020eb296aeeb3712ae088c09b224
     }
 
     // line 7
-    public function block_content($context, array $blocks = [])
+    public function block_body($context, array $blocks = [])
     {
         // line 8
-        echo "    ";
+        echo "\t";
+        $this->displayBlock('content', $context, $blocks);
+    }
+
+    public function block_content($context, array $blocks = [])
+    {
+        // line 9
+        echo "\t    ";
         echo $this->getAttribute(($context["page"] ?? null), "content", []);
         echo "
-    ";
-        // line 9
+\t    ";
+        // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["page"] ?? null), "collection", [], "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["module"]) {
-            // line 10
-            echo "    \t";
-            $context["hide"] = $this->env->getExtension('Grav\Common\Twig\TwigExtension')->definedDefaultFilter($this->getAttribute($this->getAttribute($context["module"], "header", []), "hide", []), false);
             // line 11
-            echo "    \t";
+            echo "\t    \t";
+            $context["hide"] = $this->env->getExtension('Grav\Common\Twig\TwigExtension')->definedDefaultFilter($this->getAttribute($this->getAttribute($context["module"], "header", []), "hide", []), false);
+            // line 12
+            echo "\t    \t";
             if ( !($context["hide"] ?? null)) {
-                // line 12
-                echo "        ";
+                // line 13
+                echo "\t        ";
                 echo $this->getAttribute($context["module"], "content", []);
                 echo "
-    \t";
+\t    \t";
             }
-            // line 14
-            echo "    ";
+            // line 15
+            echo "\t    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['module'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 16
+        echo "\t";
     }
 
     // line 4
@@ -108,7 +118,7 @@ class __TwigTemplate_dd9dd85ac2a58117146135b0419c89c020eb296aeeb3712ae088c09b224
 
     public function getDebugInfo()
     {
-        return array (  74 => 4,  66 => 14,  60 => 12,  57 => 11,  54 => 10,  50 => 9,  45 => 8,  42 => 7,  37 => 1,  35 => 3,  29 => 1,);
+        return array (  84 => 4,  80 => 16,  74 => 15,  68 => 13,  65 => 12,  62 => 11,  58 => 10,  53 => 9,  46 => 8,  43 => 7,  38 => 1,  36 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -127,14 +137,16 @@ class __TwigTemplate_dd9dd85ac2a58117146135b0419c89c020eb296aeeb3712ae088c09b224
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
 
 
-{% block content %}
-    {{ page.content }}
-    {% for module in page.collection() %}
-    \t{% set hide = module.header.hide|defined(false) %}
-    \t{% if not hide %}
-        {{ module.content }}
-    \t{% endif %}
-    {% endfor %}
+{% block body %}
+\t{% block content %}
+\t    {{ page.content }}
+\t    {% for module in page.collection() %}
+\t    \t{% set hide = module.header.hide|defined(false) %}
+\t    \t{% if not hide %}
+\t        {{ module.content }}
+\t    \t{% endif %}
+\t    {% endfor %}
+\t{% endblock %}
 {% endblock %}
 ", "modular.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\agency\\templates\\modular.html.twig");
     }

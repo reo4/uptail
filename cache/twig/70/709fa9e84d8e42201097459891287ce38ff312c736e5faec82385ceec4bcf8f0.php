@@ -119,30 +119,9 @@ class __TwigTemplate_2931af388c4940e8d1fc38aa0826566d99ba2acffc1c2bbcac42094b346
             // line 47
             echo $this->getAttribute($context["portfolio"], "description", []);
             echo "</p>
-                            <ul class=\"list-inline item-details\">
-                                <li>Client:
-                                    <strong><a href=\"http://startbootstrap.com\">";
-            // line 50
-            echo $this->getAttribute($context["portfolio"], "client", []);
-            echo "</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href=\"http://startbootstrap.com\">";
-            // line 54
-            echo $this->getAttribute($context["portfolio"], "projectdate", []);
-            echo "</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href=\"http://startbootstrap.com\">";
-            // line 58
-            echo $this->getAttribute($context["portfolio"], "category", []);
-            echo "</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>
+                            ";
+            // line 62
+            echo "                            <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Contact for details</button>
                         </div>
                     </div>
                 </div>
@@ -168,7 +147,7 @@ class __TwigTemplate_2931af388c4940e8d1fc38aa0826566d99ba2acffc1c2bbcac42094b346
 
     public function getDebugInfo()
     {
-        return array (  140 => 58,  133 => 54,  126 => 50,  120 => 47,  114 => 46,  109 => 44,  93 => 32,  89 => 31,  82 => 26,  71 => 21,  67 => 20,  61 => 17,  52 => 11,  49 => 10,  45 => 9,  38 => 5,  30 => 1,);
+        return array (  124 => 62,  120 => 47,  114 => 46,  109 => 44,  93 => 32,  89 => 31,  82 => 26,  71 => 21,  67 => 20,  61 => 17,  52 => 11,  49 => 10,  45 => 9,  38 => 5,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -228,7 +207,7 @@ class __TwigTemplate_2931af388c4940e8d1fc38aa0826566d99ba2acffc1c2bbcac42094b346
                             <hr class=\"star-primary\">
                             <img src=\"{{ page.media[portfolio.img].url }}\" class=\"img-responsive img-centered\" alt=\"{{ portfolio.alt }}\">
                             <p>{{ portfolio.description }}</p>
-                            <ul class=\"list-inline item-details\">
+                            {# <ul class=\"list-inline item-details\">
                                 <li>Client:
                                     <strong><a href=\"http://startbootstrap.com\">{{ portfolio.client }}</a>
                                     </strong>
@@ -241,8 +220,8 @@ class __TwigTemplate_2931af388c4940e8d1fc38aa0826566d99ba2acffc1c2bbcac42094b346
                                     <strong><a href=\"http://startbootstrap.com\">{{ portfolio.category }}</a>
                                     </strong>
                                 </li>
-                            </ul>
-                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>
+                            </ul> #}
+                            <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Contact for details</button>
                         </div>
                     </div>
                 </div>

@@ -4,12 +4,14 @@
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
 
 
-{% block content %}
-    {{ page.content }}
-    {% for module in page.collection() %}
-    	{% set hide = module.header.hide|defined(false) %}
-    	{% if not hide %}
-        {{ module.content }}
-    	{% endif %}
-    {% endfor %}
+{% block body %}
+	{% block content %}
+	    {{ page.content }}
+	    {% for module in page.collection() %}
+	    	{% set hide = module.header.hide|defined(false) %}
+	    	{% if not hide %}
+	        {{ module.content }}
+	    	{% endif %}
+	    {% endfor %}
+	{% endblock %}
 {% endblock %}
