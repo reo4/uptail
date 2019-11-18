@@ -1,5 +1,33 @@
-<section id="footer" class="section bg-gray">
+{# <section id="footer" class="section bg-gray">
     <section class="container {{ grid_size }}">
         <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart-o pulse "></i> by <a href="https://trilby.media">Trilby Media</a>.</p>
     </section>
-</section>
+</section> #}
+
+<footer>
+	<div class="footer-wrapper">
+		<span class="copyright" style="color: black;">Copyright &copy;
+			{{ site.title }}
+			2017</span>
+		<ul class="list-inline social-buttons">
+			{% for network in site.social %}
+				<li>
+					<a href="{{ network.url }}">
+						<i class="fa fa-{{ network.title }}"></i>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+		<ul
+			class="list-inline quicklinks">
+			{# {% for link in site.quicklinks %} #}
+			<li>
+				<a href="/uptail">Home</a>
+				<a href="/uptail/#solutions">Solutions</a>
+				<a href="/uptail/#services">Services</a>
+				<a href="/uptail/#contact">Contact Us</a>
+			</li>
+			{# {% endfor %} #}
+		</ul>
+	</div>
+</footer>

@@ -1,6 +1,19 @@
 {% import 'macros/macros.html.twig' as macros %}
 
 <ul {{ tree ? 'class="tree"' : '' }}>
-    {{ macros.nav_loop(pages) }}
+	<li>
+		<a href="/uptail/#">Home</a>
+	</li>
+	<li>
+		<a href="/uptail/#solutions">Solutions</a>
+	</li>
+	<li>
+		<a href="/uptail/#services">Services</a>
+	</li>
+	<li>
+		<a href="/uptail/#contact">Contact Us</a>
+	</li>
+	<li>
+		<a href="/uptail/blog" class="active">blog</a>
+	</li>
 </ul>
-

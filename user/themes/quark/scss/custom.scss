@@ -1,0 +1,61 @@
+$primary: #314DF1;
+$secondary: #314DF1;
+$secondary-dark: #333;
+
+
+#header {
+    padding: 15px 35px;
+    height: unset !important;
+    .navbar{ 
+        align-items: center;
+        .navbar-section.logo{
+            height: unset !important;
+            .navbar-brand {
+                font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                display: inline-block;
+                height: unset;
+                border-radius: 3px;
+                padding-bottom: 13px;
+                font-size: 30px !important;
+                .brand-up{
+                    color: $primary;
+                    margin-right: -9px;
+                    font-weight: bold;
+                }
+                .brand-tail{
+                    font-weight: bold;
+                    color: black;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: bold;
+                    // margin-top: 5px;
+                    margin-bottom: 0;
+                    color: black;
+                    text-align: center;
+                }
+            
+            }
+    
+        }
+        .navbar-section.desktop-menu{
+            a {
+                padding-top: 19.5px;
+                padding-bottom: 19.5px;
+                color: black;
+                border-radius: 3px;
+                text-transform: uppercase;
+                font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+                letter-spacing: 1px;
+                &:hover{
+                    color: #314DF1 !important;
+                }                 
+                &.active {
+                    color: #fff !important;
+                    background-color: #314DF1;
+                }
+            }
+        }
+    }
+}

@@ -28,61 +28,71 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
     {
         // line 1
         echo "<footer>
-    <div class=\"container\">
-        <div class=\"row\">
-            <div class=\"col-md-4\">
-                <span class=\"copyright\" style=\"color: black;\">Copyright &copy; ";
-        // line 5
+\t<div class=\"container\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-md-4\">
+\t\t\t\t<span class=\"copyright\" style=\"color: black;\">Copyright &copy;
+\t\t\t\t\t";
+        // line 6
         echo $this->getAttribute(($context["site"] ?? null), "title", []);
-        echo " 2017</span>
-            </div>
-            <div class=\"col-md-4\">
-                <ul class=\"list-inline social-buttons\">
-                    ";
-        // line 9
+        echo "
+\t\t\t\t\t2017</span>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-4\">
+\t\t\t\t<ul class=\"list-inline social-buttons\">
+\t\t\t\t\t";
+        // line 11
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["site"] ?? null), "social", []));
         foreach ($context['_seq'] as $context["_key"] => $context["network"]) {
-            // line 10
-            echo "                        <li><a href=\"";
+            // line 12
+            echo "\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"";
+            // line 13
             echo $this->getAttribute($context["network"], "url", []);
-            echo "\"><i class=\"fa fa-";
+            echo "\">
+\t\t\t\t\t\t\t\t<i class=\"fa fa-";
+            // line 14
             echo $this->getAttribute($context["network"], "title", []);
-            echo "\"></i></a>
-                        </li>
-                    ";
+            echo "\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['network'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 13
-        echo "                </ul>
-            </div>
-            <div class=\"col-md-4\">
-                <ul class=\"list-inline quicklinks\">
-                    ";
-        // line 17
+        // line 18
+        echo "\t\t\t\t</ul>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-4\">
+\t\t\t\t<ul class=\"list-inline quicklinks\">
+\t\t\t\t\t";
+        // line 22
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["site"] ?? null), "quicklinks", []));
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 18
-            echo "                        <li><a href=\"";
-            echo $this->getAttribute($context["link"], "url", []);
+            // line 23
+            echo "\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"";
+            // line 24
+            echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->absoluteUrlFilter($this->getAttribute($context["link"], "url", []));
             echo "\">";
             echo $this->getAttribute($context["link"], "title", []);
             echo "</a>
-                        </li>
-                    ";
+\t\t\t\t\t\t</li>
+\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['link'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
-        echo "                </ul>
-            </div>
-        </div>
-    </div>
-</footer>";
+        // line 27
+        echo "\t\t\t\t</ul>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</footer>
+";
     }
 
     public function getTemplateName()
@@ -97,7 +107,7 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
 
     public function getDebugInfo()
     {
-        return array (  81 => 21,  69 => 18,  65 => 17,  59 => 13,  47 => 10,  43 => 9,  36 => 5,  30 => 1,);
+        return array (  90 => 27,  79 => 24,  76 => 23,  72 => 22,  66 => 18,  56 => 14,  52 => 13,  49 => 12,  45 => 11,  37 => 6,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -111,29 +121,36 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
     public function getSourceContext()
     {
         return new Source("<footer>
-    <div class=\"container\">
-        <div class=\"row\">
-            <div class=\"col-md-4\">
-                <span class=\"copyright\" style=\"color: black;\">Copyright &copy; {{ site.title }} 2017</span>
-            </div>
-            <div class=\"col-md-4\">
-                <ul class=\"list-inline social-buttons\">
-                    {% for network in site.social %}
-                        <li><a href=\"{{ network.url }}\"><i class=\"fa fa-{{ network.title }}\"></i></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class=\"col-md-4\">
-                <ul class=\"list-inline quicklinks\">
-                    {% for link in site.quicklinks %}
-                        <li><a href=\"{{ link.url }}\">{{ link.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>", "partials/footer.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\agency\\templates\\partials\\footer.html.twig");
+\t<div class=\"container\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-md-4\">
+\t\t\t\t<span class=\"copyright\" style=\"color: black;\">Copyright &copy;
+\t\t\t\t\t{{ site.title }}
+\t\t\t\t\t2017</span>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-4\">
+\t\t\t\t<ul class=\"list-inline social-buttons\">
+\t\t\t\t\t{% for network in site.social %}
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"{{ network.url }}\">
+\t\t\t\t\t\t\t\t<i class=\"fa fa-{{ network.title }}\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t</ul>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-4\">
+\t\t\t\t<ul class=\"list-inline quicklinks\">
+\t\t\t\t\t{% for link in site.quicklinks %}
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"{{ link.url | absolute_url }}\">{{ link.title }}</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t</ul>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</footer>
+", "partials/footer.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\agency\\templates\\partials\\footer.html.twig");
     }
 }

@@ -1,10 +1,9 @@
 {% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
 <a href="{{ home_url }}" class="navbar-brand mr-10">
-	Uptail
-{# {% if logo %}
-  {% set logo_file = (logo|first).name %}
-  <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.name }}" />
-{% else %}
-  {% include('@images/grav-logo.svg') %}
-{% endif %} #}
+	{% for word in site.brand %}
+		<span class="{{'brand-' ~ strtolower(word) }}">{{word}}</span>
+	{% endfor %}
+	<p>
+		<strong>Smart solutions for retail</strong>
+	</p>
 </a>

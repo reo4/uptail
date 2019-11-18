@@ -39,11 +39,17 @@ address:
   - line: Beverly Hills, CA 90210
 
 quicklinks:
-  - title: Products
-    url: '#products'
+  - title: Home
+    url: '#'
+  - title: Solutions
+    url: '#solutions'
   - title: Services
     url: '#services'
-  - title: Company
-    url: '#'
-  - title: Privacy & Terms 
-    url: '#'
+  - title: Contact Us 
+    url: '#contact'
+  - title: Blog 
+    url: 'blog'
+
+brand:
+ - Up
+ - Tail

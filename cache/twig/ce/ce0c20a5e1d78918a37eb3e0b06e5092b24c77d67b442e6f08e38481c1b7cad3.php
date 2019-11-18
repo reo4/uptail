@@ -34,12 +34,22 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
         // line 3
         echo ((($context["tree"] ?? null)) ? ("class=\"tree\"") : (""));
         echo ">
-    ";
-        // line 4
-        echo $context["macros"]->getnav_loop(($context["pages"] ?? null));
-        echo "
+\t<li>
+\t\t<a href=\"/uptail/#\">Home</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/#solutions\">Solutions</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/#services\">Services</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/#contact\">Contact Us</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/blog\" class=\"active\">blog</a>
+\t</li>
 </ul>
-
 ";
     }
 
@@ -55,7 +65,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 
     public function getDebugInfo()
     {
-        return array (  39 => 4,  35 => 3,  32 => 2,  30 => 1,);
+        return array (  35 => 3,  32 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -71,9 +81,22 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
         return new Source("{% import 'macros/macros.html.twig' as macros %}
 
 <ul {{ tree ? 'class=\"tree\"' : '' }}>
-    {{ macros.nav_loop(pages) }}
+\t<li>
+\t\t<a href=\"/uptail/#\">Home</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/#solutions\">Solutions</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/#services\">Services</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/#contact\">Contact Us</a>
+\t</li>
+\t<li>
+\t\t<a href=\"/uptail/blog\" class=\"active\">blog</a>
+\t</li>
 </ul>
-
 ", "partials/navigation.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\quark\\templates\\partials\\navigation.html.twig");
     }
 }

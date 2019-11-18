@@ -5,8 +5,8 @@
  */
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
+$(function () {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -21,27 +21,27 @@ $('body').scrollspy({
 })
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+$('.navbar-collapse ul li a').click(function () {
     $('.navbar-toggle:visible').click();
 });
 
-$('div.modal').on('show.bs.modal', function() {
-	var modal = this;
-	var hash = modal.id;
-	window.location.hash = hash;
-	window.onhashchange = function() {
-		if (!location.hash){
-			$(modal).modal('hide');
-		}
-	}
-    $(document).keyup(function(e) {
-       if (e.key === "Escape") {
-        $(modal).modal('hide');
-       }
-   });
+$('div.modal').on('show.bs.modal', function () {
+    var modal = this;
+    var hash = modal.id;
+    window.location.hash = hash;
+    window.onhashchange = function () {
+        if (!location.hash) {
+            $(modal).modal('hide');
+        }
+    }
+    $(document).keyup(function (e) {
+        if (e.key === "Escape") {
+            $(modal).modal('hide');
+        }
+    });
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     if (window.innerWidth > 990) {
         var instance = new vidbg('.video-wrapper', {
             mp4: 'user/themes/agency/videos/cover.mp4',
@@ -53,4 +53,10 @@ $(document).ready(function(){
     $('a[href="#about"]').click(function () {
         $('a[href="#portfolioModal1"]').click()
     })
+})
+
+$('button[data-dismiss="modal"]').click(function () {
+    setTimeout(function () {
+        window.scrollTo(0, document.body.scrollHeight);
+    }, 500)
 })

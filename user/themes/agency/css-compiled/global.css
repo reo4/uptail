@@ -6928,7 +6928,6 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-  font-family: Helvetica, Arial, cursive;
   display: inline-block;
   height: unset;
   border-radius: 3px;
