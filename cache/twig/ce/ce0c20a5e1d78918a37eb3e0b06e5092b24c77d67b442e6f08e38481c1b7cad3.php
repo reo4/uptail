@@ -35,12 +35,15 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
         echo ((($context["tree"] ?? null)) ? ("class=\"tree\"") : (""));
         echo ">
 \t<li>
-\t\t<a href=\"/uptail/#\">Home</a>
+\t\t<a href=";
+        // line 5
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/");
+        echo ">Home</a>
 \t</li>
 \t<li>
 \t\t<a href=";
         // line 8
-        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/uptail/#solutions");
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/#solutions");
         echo ">Solutions</a>
 \t</li>
 \t<li>
@@ -77,7 +80,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 
     public function getDebugInfo()
     {
-        return array (  61 => 17,  55 => 14,  49 => 11,  43 => 8,  35 => 3,  32 => 2,  30 => 1,);
+        return array (  64 => 17,  58 => 14,  52 => 11,  46 => 8,  40 => 5,  35 => 3,  32 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -94,10 +97,10 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 
 <ul {{ tree ? 'class=\"tree\"' : '' }}>
 \t<li>
-\t\t<a href=\"/uptail/#\">Home</a>
+\t\t<a href={{url('/')}}>Home</a>
 \t</li>
 \t<li>
-\t\t<a href={{url('/uptail/#solutions')}}>Solutions</a>
+\t\t<a href={{url('/#solutions')}}>Solutions</a>
 \t</li>
 \t<li>
 \t\t<a href={{url('/#services')}}>Services</a>
