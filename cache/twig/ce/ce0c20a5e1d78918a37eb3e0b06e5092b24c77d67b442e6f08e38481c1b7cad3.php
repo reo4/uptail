@@ -38,16 +38,28 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 \t\t<a href=\"/uptail/#\">Home</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/#solutions\">Solutions</a>
+\t\t<a href=";
+        // line 8
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/uptail/#solutions");
+        echo ">Solutions</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/#services\">Services</a>
+\t\t<a href=";
+        // line 11
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/#services");
+        echo ">Services</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/#contact\">Contact Us</a>
+\t\t<a href=";
+        // line 14
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/#contact");
+        echo ">Contact Us</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/blog\" class=\"active\">blog</a>
+\t\t<a href=";
+        // line 17
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/uptail/blog");
+        echo " class=\"active\">blog</a>
 \t</li>
 </ul>
 ";
@@ -65,7 +77,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 
     public function getDebugInfo()
     {
-        return array (  35 => 3,  32 => 2,  30 => 1,);
+        return array (  61 => 17,  55 => 14,  49 => 11,  43 => 8,  35 => 3,  32 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -85,16 +97,16 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 \t\t<a href=\"/uptail/#\">Home</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/#solutions\">Solutions</a>
+\t\t<a href={{url('/uptail/#solutions')}}>Solutions</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/#services\">Services</a>
+\t\t<a href={{url('/#services')}}>Services</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/#contact\">Contact Us</a>
+\t\t<a href={{url('/#contact')}}>Contact Us</a>
 \t</li>
 \t<li>
-\t\t<a href=\"/uptail/blog\" class=\"active\">blog</a>
+\t\t<a href={{url('/uptail/blog')}} class=\"active\">blog</a>
 \t</li>
 </ul>
 ", "partials/navigation.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\quark\\templates\\partials\\navigation.html.twig");

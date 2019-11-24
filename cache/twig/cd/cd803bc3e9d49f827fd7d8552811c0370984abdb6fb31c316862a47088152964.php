@@ -40,7 +40,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
 \t\t\t\t<span class=\"icon-bar\"></span>
 \t\t\t</button>
 \t\t\t<div class=\"brand-box\">
-\t\t\t\t<a class=\"navbar-brand page-scroll\" href=\"#page-top\">
+\t\t\t\t<a class=\"navbar-brand page-scroll\" href=\"#\">
 \t\t\t\t\t";
         // line 15
         $context['_parent'] = $context;
@@ -164,7 +164,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
 \t\t\t\t<span class=\"icon-bar\"></span>
 \t\t\t</button>
 \t\t\t<div class=\"brand-box\">
-\t\t\t\t<a class=\"navbar-brand page-scroll\" href=\"#page-top\">
+\t\t\t\t<a class=\"navbar-brand page-scroll\" href=\"#\">
 \t\t\t\t\t{% for word in site.brand %}
 \t\t\t\t\t\t<span class=\"{{'brand-' ~ strtolower(word) }}\">{{word}}</span>
 \t\t\t\t\t{% endfor %}
