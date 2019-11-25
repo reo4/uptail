@@ -7032,6 +7032,10 @@ fieldset[disabled] .btn-xl.active {
 header {
   text-align: center;
   color: #fff;
+  margin-top: 107px;
+  background: rgba(0, 0, 0, 0.3);
+}
+header.bg-cover {
   background-attachment: scroll;
   background-image: url(../img/header-bg.jpg);
   background-position: center center;
@@ -7040,7 +7044,6 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-top: 107px;
 }
 
 header .intro-text {
@@ -7720,6 +7723,22 @@ footer ul.quicklinks {
 
 .portfolio-caption {
   margin-top: 2rem;
+}
+
+#myVideo {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  right: 0;
+  height: auto;
+}
+#myVideo.hide {
+  display: none;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 /*# sourceMappingURL=global.css.map */

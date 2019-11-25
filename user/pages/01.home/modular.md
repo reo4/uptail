@@ -18,6 +18,7 @@ content:
             - _about
             - _team
             - _clients
+            - _what_is_new
 
 ---
 

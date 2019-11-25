@@ -302,16 +302,20 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     margin-top:107px;
+    background: rgba(0, 0, 0, 0.3);
+    &.bg-cover {
+        background-attachment: scroll;
+        background-image: url(../img/header-bg.jpg);
+        background-position: center center;
+        background-repeat: none;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
 }
+
 
 header .intro-text {
     display: flex;
@@ -985,4 +989,18 @@ footer ul.quicklinks {
 }
 .portfolio-caption{
     margin-top: 2rem;
+}
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    right: 0;
+    height: auto;
+    &.hide {
+        display: none
+    }
+}
+.bg-white{
+    background-color: white;
 }

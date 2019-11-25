@@ -8,9 +8,16 @@
 $(function () {
     $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        if ($anchor.attr('href') === '#header') {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 1500, 'easeInOutExpo');
+        }
+        else {
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+        }
         event.preventDefault();
     });
 });
@@ -42,13 +49,9 @@ $('div.modal').on('show.bs.modal', function () {
 });
 
 $(document).ready(function () {
-    if (window.innerWidth > 990) {
-        var instance = new vidbg('.video-wrapper', {
-            mp4: 'user/themes/agency/videos/cover.mp4',
-            overlay: true,
-            overlayColor: '#000',
-            overlayAlpha: 0.4
-        })
+    if (window.innerWidth < 990) {
+        $('#header').addClass('bg-cover')
+        $('#myVideo').addClass('hide')
     }
     $('a[href="#about"]').click(function () {
         $('a[href="#portfolioModal1"]').click()

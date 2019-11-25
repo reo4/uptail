@@ -1,13 +1,17 @@
-<header class="video-wrapper">
-    <div class="container">
-        <div class="intro-text">
-            <h2 class="head">{{page.header.head}}</h2>
-            <div class="bottom-section">
-	            <h4>{{page.header.description}}</h4>
-	            {% for button in page.header.buttons %}
-	                <a class="btn btn-xl" href="{{ button.url }}">{{ button.text }}</a>
-	            {% endfor %}
-            </div>
-        </div>
-    </div>
+<header id="header">
+	<div class="container">
+		<video autoplay muted loop id="myVideo">
+			<source src={{url('theme://videos/cover.mp4')}} type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+		<div class="intro-text">
+			<h2 class="head">{{page.header.head}}</h2>
+			<div class="bottom-section">
+				<h4>{{page.header.description}}</h4>
+				{% for button in page.header.buttons %}
+					<a class="btn btn-xl" href="{{ button.url }}">{{ button.text }}</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </header>

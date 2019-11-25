@@ -69,7 +69,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
 \t\t<div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
 \t\t\t<ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t<li class=\"active\">
-\t\t\t\t\t<a href=\"#page-top\">Home</a>
+\t\t\t\t\t<a class=\"page-scroll\" href=\"#header\">Home</a>
 \t\t\t\t</li>
 \t\t\t\t";
         // line 31
@@ -179,7 +179,7 @@ class __TwigTemplate_881004a6a4f4f10574c3766e6e61c6943347513d101538e898df3998470
 \t\t<div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
 \t\t\t<ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t<li class=\"active\">
-\t\t\t\t\t<a href=\"#page-top\">Home</a>
+\t\t\t\t\t<a class=\"page-scroll\" href=\"#header\">Home</a>
 \t\t\t\t</li>
 \t\t\t\t{% for link in site.links %}
 \t\t\t\t\t{% if link.url | contains('http') %}

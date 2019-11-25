@@ -29,65 +29,65 @@ class __TwigTemplate_093f408ac5471e943fad4e302cda2d41381946ebf4076d0059223ccf611
         // line 1
         echo "<section id=\"";
         echo $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "menu", []);
-        echo "\">
-  <div class=\"container\">
-    <div class=\"row\">
-        <div class=\"col-lg-12 text-center\">
-            ";
+        echo "\" class=\"bg-white\">
+\t<div class=\"container\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-12 text-center\">
+\t\t\t\t";
         // line 5
         echo ($context["content"] ?? null);
         echo "
-        </div>
-    </div>
-    <div class=\"row text-center\">
-        ";
+\t\t\t</div>
+\t\t</div>
+\t\t<div class=\"row text-center\">
+\t\t\t";
         // line 9
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "services", []));
         foreach ($context['_seq'] as $context["_key"] => $context["service"]) {
             // line 10
-            echo "            <div class=\"col-md-4 mb-5\">
-                ";
+            echo "\t\t\t\t<div class=\"col-md-4 mb-5\">
+\t\t\t\t\t";
             // line 11
             if ($this->getAttribute($context["service"], "icon", [])) {
                 // line 12
-                echo "                    <span class=\"fa-stack fa-4x\">
-                        <i class=\"fa fa-circle fa-stack-2x text-primary\"></i>
-                        <i class=\"fa fa-";
+                echo "\t\t\t\t\t\t<span class=\"fa-stack fa-4x\">
+\t\t\t\t\t\t\t<i class=\"fa fa-circle fa-stack-2x text-primary\"></i>
+\t\t\t\t\t\t\t<i class=\"fa fa-";
                 // line 14
                 echo $this->getAttribute($context["service"], "icon", []);
                 echo " fa-stack-1x fa-inverse\"></i>
-                    </span>
-                ";
+\t\t\t\t\t\t</span>
+\t\t\t\t\t";
             }
             // line 17
-            echo "                ";
+            echo "\t\t\t\t\t";
             if ($this->getAttribute($context["service"], "header", [])) {
                 // line 18
-                echo "                    <h4 class=\"service-heading\">";
+                echo "\t\t\t\t\t\t<h4 class=\"service-heading\">";
                 echo $this->getAttribute($context["service"], "header", []);
                 echo "</h4>
-                ";
+\t\t\t\t\t";
             }
             // line 20
-            echo "                ";
+            echo "\t\t\t\t\t";
             if ($this->getAttribute($context["service"], "text", [])) {
                 // line 21
-                echo "                    <p class=\"text-muted\">";
+                echo "\t\t\t\t\t\t<p class=\"text-muted\">";
                 echo $this->getAttribute($context["service"], "text", []);
                 echo "</p>
-                ";
+\t\t\t\t\t";
             }
             // line 23
-            echo "            </div>
-        ";
+            echo "\t\t\t\t</div>
+\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['service'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 25
-        echo "    </div>
-</div>
+        echo "\t\t</div>
+\t</div>
 </section>
 ";
     }
@@ -117,32 +117,32 @@ class __TwigTemplate_093f408ac5471e943fad4e302cda2d41381946ebf4076d0059223ccf611
 
     public function getSourceContext()
     {
-        return new Source("<section id=\"{{page.header.menu}}\">
-  <div class=\"container\">
-    <div class=\"row\">
-        <div class=\"col-lg-12 text-center\">
-            {{ content }}
-        </div>
-    </div>
-    <div class=\"row text-center\">
-        {% for service in page.header.services %}
-            <div class=\"col-md-4 mb-5\">
-                {% if service.icon %}
-                    <span class=\"fa-stack fa-4x\">
-                        <i class=\"fa fa-circle fa-stack-2x text-primary\"></i>
-                        <i class=\"fa fa-{{ service.icon }} fa-stack-1x fa-inverse\"></i>
-                    </span>
-                {% endif %}
-                {% if service.header %}
-                    <h4 class=\"service-heading\">{{ service.header }}</h4>
-                {% endif %}
-                {% if service.text %}
-                    <p class=\"text-muted\">{{ service.text }}</p>
-                {% endif %}
-            </div>
-        {% endfor %}
-    </div>
-</div>
+        return new Source("<section id=\"{{page.header.menu}}\" class=\"bg-white\">
+\t<div class=\"container\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-12 text-center\">
+\t\t\t\t{{ content }}
+\t\t\t</div>
+\t\t</div>
+\t\t<div class=\"row text-center\">
+\t\t\t{% for service in page.header.services %}
+\t\t\t\t<div class=\"col-md-4 mb-5\">
+\t\t\t\t\t{% if service.icon %}
+\t\t\t\t\t\t<span class=\"fa-stack fa-4x\">
+\t\t\t\t\t\t\t<i class=\"fa fa-circle fa-stack-2x text-primary\"></i>
+\t\t\t\t\t\t\t<i class=\"fa fa-{{ service.icon }} fa-stack-1x fa-inverse\"></i>
+\t\t\t\t\t\t</span>
+\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% if service.header %}
+\t\t\t\t\t\t<h4 class=\"service-heading\">{{ service.header }}</h4>
+\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% if service.text %}
+\t\t\t\t\t\t<p class=\"text-muted\">{{ service.text }}</p>
+\t\t\t\t\t{% endif %}
+\t\t\t\t</div>
+\t\t\t{% endfor %}
+\t\t</div>
+\t</div>
 </section>
 ", "modular/services.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\agency\\templates\\modular\\services.html.twig");
     }

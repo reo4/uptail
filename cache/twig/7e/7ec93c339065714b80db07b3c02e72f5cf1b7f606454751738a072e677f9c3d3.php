@@ -27,7 +27,7 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<footer>
+        echo "<footer class=\"bg-white\">
 \t<div class=\"container\">
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-4\">
@@ -120,7 +120,7 @@ class __TwigTemplate_56aaa8488846c72e6f82818bafb831744a27c74608ae4af386740cc5249
 
     public function getSourceContext()
     {
-        return new Source("<footer>
+        return new Source("<footer class=\"bg-white\">
 \t<div class=\"container\">
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-4\">
