@@ -976,4 +976,8 @@ ul.pagination {
   background-color: #314DF1;
 }
 
+.card-body > h3 {
+  display: none;
+}
+
 /*# sourceMappingURL=theme.css.map */

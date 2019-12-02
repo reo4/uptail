@@ -13,9 +13,9 @@ show_breadcrumbs: true
 show_pagination: true
 content:
     items: '@self.children'
-    limit: 6
+    limit: 4
     order:
-        by: date
+        by: default
         dir: desc
     pagination: true
     url_taxonomy_filters: true

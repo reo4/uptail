@@ -28,64 +28,63 @@ class __TwigTemplate_dbd9f19f5342f12524fe7a72c250ff5565e63ad94b07fce2ae940b0e18a
     {
         // line 1
         echo "<div class=\"card\">
-    ";
+\t";
         // line 2
         $context["image"] = twig_first($this->env, $this->getAttribute($this->getAttribute(($context["page"] ?? null), "media", []), "images", []));
         // line 3
-        echo "    ";
+        echo "\t";
         if (($context["image"] ?? null)) {
             // line 4
-            echo "    <div class=\"card-image\">
-        <a href=\"";
+            echo "\t\t<div class=\"card-image\">
+\t\t\t<a href=\"";
             // line 5
             echo $this->getAttribute(($context["page"] ?? null), "url", []);
             echo "\">";
             echo $this->getAttribute($this->getAttribute(($context["image"] ?? null), "cropZoom", [0 => 800, 1 => 400], "method"), "html", []);
             echo "</a>
-    </div>
-    ";
+\t\t</div>
+\t";
         }
         // line 8
-        echo "    <div class=\"card-header\">
-        <div class=\"card-subtitle text-gray\">
-            ";
+        echo "\t<div class=\"card-header\">
+\t\t<div class=\"card-subtitle text-gray\">
+\t\t\t";
         // line 10
         $this->loadTemplate("partials/blog/date.html.twig", "partials/blog-list-item.html.twig", 10)->display($context);
         // line 11
-        echo "    </div>
-        <div class=\"card-title\">
-        ";
+        echo "\t\t</div>
+\t\t<div class=\"card-title\">
+\t\t\t";
         // line 13
         $this->loadTemplate("partials/blog/title.html.twig", "partials/blog-list-item.html.twig", 13)->display(twig_array_merge($context, ["title_level" => "h5"]));
         // line 14
-        echo "        </div>
-    </div>
-    <div class=\"card-body\">
-        ";
+        echo "\t\t</div>
+\t</div>
+\t<div class=\"card-body\">
+\t\t";
         // line 17
         if (($this->getAttribute(($context["page"] ?? null), "summary", []) != $this->getAttribute(($context["page"] ?? null), "content", []))) {
             // line 18
-            echo "            ";
+            echo "\t\t\t";
             echo $this->getAttribute(($context["page"] ?? null), "summary", []);
             echo "
-        ";
+\t\t";
         } else {
             // line 20
-            echo "            ";
+            echo "\t\t\t";
             echo $this->getAttribute(($context["page"] ?? null), "content", []);
             echo "
-        ";
+\t\t";
         }
         // line 22
-        echo "    </div>
-    <div class=\"card-footer\">
-        ";
+        echo "\t</div>
+\t<div class=\"card-footer\">
+\t\t";
         // line 24
         $this->loadTemplate("partials/blog/taxonomy.html.twig", "partials/blog-list-item.html.twig", 24)->display($context);
         // line 25
-        echo "    </div>
+        echo "\t</div>
 </div>
-
 ";
     }
 
@@ -115,32 +114,31 @@ class __TwigTemplate_dbd9f19f5342f12524fe7a72c250ff5565e63ad94b07fce2ae940b0e18a
     public function getSourceContext()
     {
         return new Source("<div class=\"card\">
-    {% set image = page.media.images|first %}
-    {% if image %}
-    <div class=\"card-image\">
-        <a href=\"{{ page.url }}\">{{ image.cropZoom(800,400).html|raw }}</a>
-    </div>
-    {% endif %}
-    <div class=\"card-header\">
-        <div class=\"card-subtitle text-gray\">
-            {% include 'partials/blog/date.html.twig' %}
-    </div>
-        <div class=\"card-title\">
-        {% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
-        </div>
-    </div>
-    <div class=\"card-body\">
-        {% if page.summary != page.content %}
-            {{ page.summary|raw }}
-        {% else %}
-            {{ page.content|raw }}
-        {% endif %}
-    </div>
-    <div class=\"card-footer\">
-        {% include 'partials/blog/taxonomy.html.twig' %}
-    </div>
+\t{% set image = page.media.images|first %}
+\t{% if image %}
+\t\t<div class=\"card-image\">
+\t\t\t<a href=\"{{ page.url }}\">{{ image.cropZoom(800,400).html|raw }}</a>
+\t\t</div>
+\t{% endif %}
+\t<div class=\"card-header\">
+\t\t<div class=\"card-subtitle text-gray\">
+\t\t\t{% include 'partials/blog/date.html.twig' %}
+\t\t</div>
+\t\t<div class=\"card-title\">
+\t\t\t{% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
+\t\t</div>
+\t</div>
+\t<div class=\"card-body\">
+\t\t{% if page.summary != page.content %}
+\t\t\t{{ page.summary|raw }}
+\t\t{% else %}
+\t\t\t{{ page.content|raw }}
+\t\t{% endif %}
+\t</div>
+\t<div class=\"card-footer\">
+\t\t{% include 'partials/blog/taxonomy.html.twig' %}
+\t</div>
 </div>
-
 ", "partials/blog-list-item.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\quark\\templates\\partials\\blog-list-item.html.twig");
     }
 }
