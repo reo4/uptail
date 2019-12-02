@@ -980,4 +980,8 @@ ul.pagination {
   display: none;
 }
 
+.related-pages .menu-badge {
+  display: none;
+}
+
 /*# sourceMappingURL=theme.css.map */
