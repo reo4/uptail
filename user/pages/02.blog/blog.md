@@ -26,4 +26,3 @@ pagination: true
 ---
 
 # Welcome to **Uptail** Blog
-## the ramblings of a rambler
