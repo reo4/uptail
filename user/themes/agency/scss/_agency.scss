@@ -354,9 +354,9 @@ header h1 {
 
 
 @media(min-width:768px) {
-    header .intro-text {
-        padding-top: 220px;
-    }
+    // header .intro-text {
+    //     padding-top: 220px;
+    // }
     header .intro-text h1 {
         margin-bottom: 25px;
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -956,6 +956,13 @@ footer ul.quicklinks {
     }
 }
 
+@media(max-width: 1380px){
+    header .intro-text {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}
+
 .navbar-default .nav li a {
     color: black;
     &:focus {
@@ -1003,4 +1010,11 @@ footer ul.quicklinks {
 }
 .bg-white{
     background-color: white;
+}
+.form-input {
+    border: none;
+    color: black;
+}
+#contact label {
+    color: white;
 }
