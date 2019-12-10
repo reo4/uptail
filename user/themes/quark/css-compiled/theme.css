@@ -997,7 +997,16 @@ body.header-fixed.header-animated #header.scrolled ~ .mobile-menu .button_contai
 .overlay .mobile-logo a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 30px;
+}
+.overlay .mobile-logo a span:last-of-type {
+  margin-left: -9px;
+}
+.overlay .mobile-logo a p {
+  font-size: 16px;
+}
+.overlay .mobile-logo a p strong {
+  font-weight: normal;
 }
 .overlay .overlay-menu {
   overflow-y: auto;
@@ -1018,7 +1027,6 @@ body.header-fixed.header-animated #header.scrolled ~ .mobile-menu .button_contai
   padding: 15px;
   transition: all 0.7s;
   color: #919cb7 !important;
-  border-left: 30px solid;
 }
 .overlay .overlay-menu .treemenu li a:hover {
   background: rgba(102, 113, 137, 0.3);

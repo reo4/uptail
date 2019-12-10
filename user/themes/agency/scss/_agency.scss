@@ -354,9 +354,6 @@ header h1 {
 
 
 @media(min-width:768px) {
-    // header .intro-text {
-    //     padding-top: 220px;
-    // }
     header .intro-text h1 {
         margin-bottom: 25px;
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -925,6 +922,7 @@ body {
 }
 footer ul.quicklinks {
     display: flex;
+    justify-content: center;
 }
 .copyright {
     color: white;

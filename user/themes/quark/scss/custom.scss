@@ -85,7 +85,16 @@ body.header-fixed.header-animated #header.scrolled ~ .mobile-menu .button_contai
         a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 30px;
+            span:last-of-type {
+                margin-left: -9px;
+            }
+            p {
+                font-size: 16px;
+                strong {
+                    font-weight: normal;
+                }
+            }
         }
     }
     .overlay-menu {
@@ -106,7 +115,6 @@ body.header-fixed.header-animated #header.scrolled ~ .mobile-menu .button_contai
                     padding: 15px;
                     transition: all .7s;
                     color: #919cb7 !important;
-                    border-left: 30px solid;
                     &:hover {
                         background: rgba(102, 113, 137, 0.3);
                     }
