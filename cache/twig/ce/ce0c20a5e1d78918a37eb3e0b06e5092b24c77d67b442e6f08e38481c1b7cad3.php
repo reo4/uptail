@@ -61,7 +61,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 \t<li>
 \t\t<a href=";
         // line 17
-        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/uptail/blog");
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("/blog");
         echo " class=\"active\">blog</a>
 \t</li>
 </ul>
@@ -109,7 +109,7 @@ class __TwigTemplate_bc1b348f1a3a49eb9af752db1c94ef36e7aa33b1888eabf007185023dad
 \t\t<a href={{url('/#contact')}}>Contact Us</a>
 \t</li>
 \t<li>
-\t\t<a href={{url('/uptail/blog')}} class=\"active\">blog</a>
+\t\t<a href={{url('/blog')}} class=\"active\">blog</a>
 \t</li>
 </ul>
 ", "partials/navigation.html.twig", "D:\\Xampp\\htdocs\\uptail\\user\\themes\\quark\\templates\\partials\\navigation.html.twig");

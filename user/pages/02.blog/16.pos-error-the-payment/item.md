@@ -11,6 +11,8 @@ blog_url: /blog
 show_sidebar: true
 show_breadcrumbs: true
 show_pagination: true
+routes: 
+    default: '/pos-error-the-payment-connector-is-not-correctly-configured'
 ---
 
 ### Description

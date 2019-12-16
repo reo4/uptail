@@ -11,6 +11,8 @@ blog_url: /blog
 show_sidebar: true
 show_breadcrumbs: true
 show_pagination: true
+routes:
+  default: '/dynamics-365-pos-dual-display'
 ---
 
 ### AX2012 Dual display
